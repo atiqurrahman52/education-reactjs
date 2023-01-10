@@ -13,7 +13,7 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-    container: {
+    container: { 
       center: true,
       padding: {
         // DEFAULT: "12px",
