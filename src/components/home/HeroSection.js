@@ -7,35 +7,35 @@ const HeroSection = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
-      <div class="mt-[12px]">
-        <div class="container">
-          <div class="grid md:grid-cols-12 lg:grid-cols-12 py-8 xl:py-14 px-0 gap-6">
-            <div class="col-span-12 md:col-span-6 lg:col-span-6">
-              <h3 class="text-[#6E7B8D]  font-medium text-sm xl:text-base leading-5 xl:leading-[22px] capitalize mb-2 xl:mb-4">
+      <div className="mt-[12px]">
+        <div className="container">
+          <div className="grid md:grid-cols-12 lg:grid-cols-12 py-8 xl:py-14 px-0 gap-6">
+            <div className="col-span-12 md:col-span-6 lg:col-span-6">
+              <h3 className="text-[#6E7B8D]  font-medium text-sm xl:text-base leading-5 xl:leading-[22px] capitalize mb-2 xl:mb-4">
                 e-Learning Platform
               </h3>
-              <h1 class="text-primary  font-bold text-2xl xl:text-[56px] capitalize leading-8 xl:leading-[62px]">
+              <h1 className="text-primary  font-bold text-2xl xl:text-[56px] capitalize leading-8 xl:leading-[62px]">
                 Build an incredible
               </h1>
-              <h1 class="text-success  font-bold text-2xl xl:text-[56px] capitalize leading-8 xl:leading-[62px]">
+              <h1 className="text-success  font-bold text-2xl xl:text-[56px] capitalize leading-8 xl:leading-[62px]">
                 learning experience
               </h1>
-              <p class=" font-normal text-xs xl:text-base text-gray leading-5 xl:leading-6 mt-5 xl:mt-8 2xl:pr-10">
+              <p className=" font-normal text-xs xl:text-base text-gray leading-5 xl:leading-6 mt-5 xl:mt-8 2xl:pr-10">
                 Various versions have evolved over the years, sometimes by
-                <br class="hidden lg:block" />
+                <br className="hidden lg:block" />
                 accident
               </p>
-              <div class="flex items-center mt-8 xl:mt-16">
+              <div className="flex items-center mt-8 xl:mt-16">
                 <a
                   href="./pages/all-courses.html"
-                  class="py-2.5 px-4 xl:px-5 bg-success rounded-lg text-xs lg:text-base leading-4 xl:leading-6 capitalize text-white  mr-4"
+                  className="py-2.5 px-4 xl:px-5 bg-success rounded-lg text-xs lg:text-base leading-4 xl:leading-6 capitalize text-white  mr-4"
                 >
                   View Courses
                 </a>
                 <button
                   onClick={() => setIsModalVisible(true)}
                   type=""
-                  class="preview-btn  font-medium text-xs xl:text-base leading-5 xl:leading-6 capitalize text-primary flex items-center gap-2"
+                  className="preview-btn  font-medium text-xs xl:text-base leading-5 xl:leading-6 capitalize text-primary flex items-center gap-2"
                 >
                   <svg
                     width="40"
@@ -59,20 +59,20 @@ const HeroSection = () => {
                   Watch Video
                 </button>
               </div>
-              <div class="mt-6 xl:mt-10">
-                <h3 class=" font-medium text-sm xl:text-base leading-5 capitalize text-primary mb-2 xl:mb-3">
+              <div className="mt-6 xl:mt-10">
+                <h3 className=" font-medium text-sm xl:text-base leading-5 capitalize text-primary mb-2 xl:mb-3">
                   Trusted by:
                 </h3>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-5 xl:gap-7">
+                <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-5 xl:gap-7">
                   {heroBrand.map((item, i) => {
                     return <img className="w-10 lg:w-20 h-4 lg:h-8" key={i} src={item.img} alt="brand-logo" />;
                   })}
                 </div>
               </div>
             </div>
-            <div class="col-span-12 md:col-span-6 lg:col-span-6">
+            <div className="col-span-12 md:col-span-6 lg:col-span-6">
               <img
-                class="w-full xl:w-[619px] h-full xl:h-[504px]"
+                className="w-full xl:w-[619px] h-full xl:h-[504px]"
                 src={hero}
                 alt=""
               />
