@@ -8,6 +8,7 @@ import Skills from '../components/home/Skills';
 import SubjectArea from '../components/home/SubjectArea';
 import Swip from '../components/home/Swip';
 import BecomeInstructor from '../components/share/BecomeInstructor';
+import FeaturedCourses from '../components/share/FeaturedCourses';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Skills />
             <ExploreCoursers />
             {/* <Courses /> */}
+            <FeaturedCourses />
             <SubjectArea />
           {/* <Swip /> */}
             <HighestSellingCourses />
