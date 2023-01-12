@@ -14,6 +14,7 @@ import logo from "../../assets/images/logo/logo.png";
 import global from "../../assets/images/svg/global.svg";
 import bell from "../../assets/images/svg/Bell_pin.svg";
 import mobileLogo from "../../assets/images/logo/mobile-logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -25,9 +26,9 @@ const Navbar = () => {
       <nav className="hidden lg:block">
         {/*  main navigation  */}
         <div className="flex flex-wrap items-center justify-between w-full py-5 px-2 xl:px-8 bg-white relative border-b-[0.5px] border-[#EBEBEB]">
-          <a href="./index.html" className="w-[70px] xl:w-[86px] h-[47px]">
+          <Link to='/' className="w-[70px] xl:w-[86px] h-[47px]">
             <img src={logo} alt="" />
-          </a>
+          </Link>
 
           <div className="flex items-center justify-center flex-grow gap-8">
             <div className="relative explore-menu">

@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const BecomeInstructor = () => {
+
+
+    const navigate = useNavigate();
+    const navigateToDestination = (id) => {
+      navigate(`/instructor/${id}`);
+    };
+
     return (
         <div>
-        <a href="./pages/instructor.html">
+        {/* <Link href="./pages/instructor.html"> */}
+        {/* <Link to={`/destination/${id}`}> */}
+        <Link to='/instructor'>
           <div
             class="instructor-bg bg-cover bg-center bg-no-repeat w-full h-[203px] xl:h-[287px]"
           >
@@ -27,7 +37,7 @@ const BecomeInstructor = () => {
               </button>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     );
 };

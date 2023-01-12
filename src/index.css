@@ -55,4 +55,8 @@
    .instructor-bg{
     background-image: url('../src/assets/images/instructor/instructor.webp');
    }
+   .breadcrumb{
+    background-image: url('../src/assets/images/instructor/breadcrumb.webp');
+    /* background: url("./../assets/images/instructor/breadcrumb.webp"); */
+   }
 /* Background image started  */

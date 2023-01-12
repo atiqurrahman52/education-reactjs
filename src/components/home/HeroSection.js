@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import hero from "../../assets/images/hero/hero.webp";
 import { heroBrand } from "../../data/home/heroBrandData";
 import Modal from "../share/Modal";
@@ -26,12 +27,12 @@ const HeroSection = () => {
                 accident
               </p>
               <div className="flex items-center mt-8 xl:mt-16">
-                <a
-                  href="./pages/all-courses.html"
+                <Link
+                  to="/all-courses"
                   className="py-2.5 px-4 xl:px-5 bg-success rounded-lg text-xs lg:text-base leading-4 xl:leading-6 capitalize text-white  mr-4"
                 >
                   View Courses
-                </a>
+                </Link>
                 <button
                   onClick={() => setIsModalVisible(true)}
                   type=""
