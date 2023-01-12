@@ -86,12 +86,12 @@ const Navbar = () => {
 
           {isLoggedIn ? (
             <div className="flex items-center space-x-2 xl:space-x-5">
-              <a
-                href="./pages/instructor.html"
+              <Link
+                to="/instructor"
                 className=" text-sm xl:text-base leading-6 text-primary capitalize"
               >
                 Become an Instructor
-              </a>
+              </Link>
 
               <div className="relative group">
                 <a
@@ -643,12 +643,12 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex items-center space-x-2 xl:space-x-5">
-              <a
-                href="./pages/instructor.html"
+              <Link
+                to="/instructor"
                 className=" text-sm xl:text-base leading-6 text-primary capitalize"
               >
                 Become an Instructor
-              </a>
+              </Link>
 
               <div className="relative group">
                 <div className="flex items-center gap-1">
@@ -1115,12 +1115,12 @@ const Navbar = () => {
                 >
                   Language
                 </a>
-                <a
-                  href="./pages/instructor.html"
+                <Link
+                  to="/instructor"
                   className=" text-xs leading-5 text-disable  px-4 border-b border-[#F1F1F2] py-4"
                 >
                   Become an Instructor
-                </a>
+                </Link>
                 <a
                   href="/"
                   className=" text-xs leading-5 text-disable  px-4 border-b border-[#F1F1F2] py-4"
