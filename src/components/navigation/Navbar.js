@@ -1064,7 +1064,7 @@ const Navbar = () => {
               <div>
                 <img
                   className="w-[32px] h-[32px]"
-                  src="./assets/images/logo/mobile-logo.png"
+                  src={mobileLogo}
                   alt=""
                 />
               </div>
