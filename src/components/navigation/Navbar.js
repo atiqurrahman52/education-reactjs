@@ -7,7 +7,7 @@ import {
   User,
   X,
 } from "phosphor-react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { categoriesData } from "../../data/navigation/navBarData";
 import { AuthContext } from "../../SharedStates";
 import logo from "../../assets/images/logo/logo.png";
@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
+  const [search, setSearch] = useState(false);
+  const [mainMenu, setMainMenu] = useState(false);
 
   return (
     <header className="sticky w-full top-0 left-0 z-50">
@@ -781,6 +783,8 @@ const Navbar = () => {
                 type="button"
                 className="mobile-menu-button"
                 data-action="search-menu"
+                onClick={() => setSearch(true)}
+                
               >
                 <MagnifyingGlass size={24} className="text-disable" />
               </button>
@@ -891,6 +895,7 @@ const Navbar = () => {
                 </div>
               </div>
               <button
+              onClick={() => setMainMenu(true)}
                 type="button"
                 className="mobile-menu-button"
                 data-action="profile-menu"
@@ -902,7 +907,7 @@ const Navbar = () => {
         </div>
 
         {/*  search  */}
-        <div className="fixed top-0 right-full w-full h-14 bg-white z-30 transition-all duration-300 mobile_menu_content search-menu">
+        <div className={`${search ? 'right-0' : 'right-full'} fixed top-0 w-full h-14 bg-white z-30 transition-all duration-300 mobile_menu_content search-menu`}>
           <div className="flex justify-between px-4 py-4 space-x-4">
             <div>
               <img src={mobileLogo} alt="" />
@@ -920,14 +925,14 @@ const Navbar = () => {
               />
             </label>
 
-            <button type="button" className="close-menu">
+            <button onClick={() => setSearch(false)} type="button" className="close-menu">
               <X size={24} className=" text-disable" />
             </button>
           </div>
         </div>
 
         {isLoggedIn ? (
-          <div className="fixed top-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu">
+          <div className={`${mainMenu ? 'right-0' : 'right-full'} fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}>
             <div className="flex justify-between px-4 py-4 drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
               <div>
                 <img
@@ -1054,7 +1059,7 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <div className="fixed top-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu">
+          <div className={`${mainMenu ? 'right-0' : 'right-full'} fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}>
             <div className="flex justify-between gap-6 px-4 py-4 border-b border-[#F6F6F6]">
               <div>
                 <img
@@ -1076,25 +1081,27 @@ const Navbar = () => {
                 />
               </label>
               <button type="button" className="close-menu">
-                <i className="ph-x text-[32px] text-disable"></i>
+               
+                <X size={30} onClick={() => setMainMenu(false)} className='text-disable' />
+              
               </button>
             </div>
 
             <div className="py-6 px-3 shadow-[0_11px_12px_rgba(62,65,74,0.1)]">
               <div className="pt-3">
                 <div className="flex flex-col space-y-">
-                  <a
-                    href="./pages/signup.html"
+                  <Link to='/sign-up'
+                    
                     className=" font-medium text-xs leading-5 text-success  px-4"
                   >
                     Jon US
-                  </a>
-                  <a
-                    href="./pages/signin.html"
+                  </Link>
+                  <Link
+                    to='/sign-in'
                     className=" font-medium text-xs leading-5 text-success py-6  px-4"
                   >
                     Login
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="border-b border-t border-[#F1F1F2]">

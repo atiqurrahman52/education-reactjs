@@ -1,4 +1,5 @@
 import React from 'react';
+import instructor from '../../assets/images/instructor/breadcrumb2.webp';
 
 const InstructorBanner = () => {
     return (
@@ -41,7 +42,7 @@ const InstructorBanner = () => {
 
               <div class="">
                 <img
-                  src="../assets/images/instructor/breadcrumb2.webp"
+                  src={instructor}
                   alt=""
                 />
               </div>
