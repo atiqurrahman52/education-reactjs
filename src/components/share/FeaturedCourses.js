@@ -55,8 +55,8 @@ const FeaturedCourses = () => {
               <div
                     class="swiper-slide flex flex-col xl:flex-row items-center"
                   >
-                    <a
-                      href="./pages/course-details.html"
+                    <Link
+                      to="#"
                       class="block space-y-4 xl:w-1/2"
                     >
                       <h3
@@ -102,7 +102,7 @@ const FeaturedCourses = () => {
                       >
                         Free Preview
                       </button>
-                    </a>
+                    </Link>
 
                     <div class="xl:w-1/2">
                       <img

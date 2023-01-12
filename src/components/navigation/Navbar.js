@@ -751,19 +751,19 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <a
-                href="./pages/signin.html"
+              <Link
+                to="/sign-in"
                 className=" text-sm xl:text-base leading-6 text-primary capitalize"
               >
                 Login
-              </a>
+              </Link>
 
-              <a
-                href="./pages/signup.html"
+              <Link
+               to="/sign-up"
                 className=" text-sm xl:text-base leading-6 text-[#3789FF] border border-[#3789FF] rounded-lg py-2 px-4 capitalize"
               >
                 Join Us
-              </a>
+              </Link>
             </div>
           )}
         </div>

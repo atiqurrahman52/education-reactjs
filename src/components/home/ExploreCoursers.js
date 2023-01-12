@@ -15,7 +15,7 @@ const ExploreCoursers = () => {
             return (
               <div key={id}>
                 <Link
-                  to="/course-details"
+                  to="#"
                   className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
                 >
                   <div className="mb-4">
@@ -59,12 +59,12 @@ const ExploreCoursers = () => {
         </div>
 
         <div className="flex justify-center items-center pt-6 xl:pt-8">
-          <a
-            href="./pages/all-courses.html"
+          <Link
+            to="/all-courses"
             className="font-poppins text-sm xl:text-base leading-5 xl:leading-6 text-primary capitalize py-2.5 px-5 rounded-md border border-primary"
           >
             Explore All Courses
-          </a>
+          </Link>
         </div>
       </div>
     </div>

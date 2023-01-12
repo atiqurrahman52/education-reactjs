@@ -16,7 +16,7 @@ const ShortCourses = () => {
       <div class="py-8 xl:py-16 gap-6 xl:gap-8 mb-5">
         <h1 class="font-poppins text-2xl xl:text-3xl leading-8 xl:leading-10 text-primary text-center capitalize mb-6 xl:mb-8">
           Learn a New Skill in
-          <span class="font-semibold">short courses </span>
+          <span class="font-semibold"> short courses </span>
         </h1>
         <Swiper
           slidesPerView="auto"
@@ -47,7 +47,7 @@ const ShortCourses = () => {
             <SwiperSlide key={id} className="">
               <div className="">
                 <Link
-                  to="/course-details"
+                  to="#"
                   className="rounded-xl overflow-hidden shadow-[0_0px_14px_rgba(175,175,175,0.16)] block"
                 >
                   <div className="mb-4">

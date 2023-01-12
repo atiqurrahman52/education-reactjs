@@ -12,11 +12,7 @@ const Footer = () => {
         <div className="container">
           <div className="grid grid-cols-1 lsm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-x-6">
             <div>
-              {/* <img
-                  className="h-[92px] w-[168px] mb-6 xl:mb-8"
-                  src="./assets/images/footer/footerlogo.webp"
-                  alt=""
-                /> */}
+            
               <img
                 className="h-[92px] w-[168px] mb-6 xl:mb-8"
                 src={logo}
@@ -26,21 +22,10 @@ const Footer = () => {
                 Let’s stay in touch
               </p>
               <div className="flex space-x-3 mb-6 xl:mb-8">
-                {/* <a href="https://www.facebook.com/" target="_blank">
-                    <img src="./assets/images/footer/Facebook.svg" alt="" />
-                  </a>
-                  <a href="https://twitter.com/" target="_blank">
-                    <img src="./assets/images/footer/Twitter.svg" alt="" />
-                  </a>
-                  <a href="https://www.instagram.com/" target="_blank">
-                    <img src="./assets/images/footer/Instagram.svg" alt="" />
-                  </a>
-                  <a href="https://www.linkedin.com/" target="_blank">
-                    <img src="./assets/images/footer/LinkedIn.svg" alt="" />
-                  </a> */}
+               
                 {socialIconSvg.map((item, i) => {
                   return (
-                    <a key={i} href={item.path} target="_blank" className="">
+                    <a key={i} to={item.path} target="_blank" className="">
                       <p
                         dangerouslySetInnerHTML={{ __html: item.icon }}
                         className=""
@@ -64,66 +49,66 @@ const Footer = () => {
                 Company
               </h1>
 
-              <a
-                href="./index.html"
+              <Link
+                to="/"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Home
-              </a>
-              <a
-                href="./pages/contact.html"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Contact Us
-              </a>
-              <a
-                href="./pages/about-us.html"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 About Us
-              </a>
-              <a
-                href="./pages/all-courses.html"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Courses
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col">
               <h1 className=" font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Terms & Services
               </h1>
 
-              <a
-                href="./pages/terms.html"
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Privacy policy
-              </a>
-              <a
-                href="./pages/terms.html"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Terms and Condition
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Payment Methods
-              </a>
-              <a
-                href="./pages/sitemap.html"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Sitemap
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 FAQ
-              </a>
+              </Link>
             </div>
             <div className="flex gap-28">
               <div className="flex flex-col">
@@ -131,68 +116,68 @@ const Footer = () => {
                   Categories
                 </h1>
 
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Development
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Marketing
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Personal Dev.
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Office
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Business
-                </a>
+                </Link>
               </div>
               <div className="flex flex-col lsm:-mr-9 xl:ml-0 mt-9">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Design
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Photography
-                </a>
-                <a
-                  href="$"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Statistics
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Data Science
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
                 >
                   Courses
-                </a>
+                </Link>
               </div>
             </div>
           </div>

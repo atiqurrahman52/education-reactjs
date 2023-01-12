@@ -46,7 +46,7 @@ const HighestSellingCourses = () => {
             <SwiperSlide key={id} className="">
               <div className="">
                 <Link
-                  to="/course-details"
+                  to="#"
                   className="rounded-xl overflow-hidden shadow-[0_0px_14px_rgba(175,175,175,0.16)] block"
                 >
                   <div className="mb-4">
