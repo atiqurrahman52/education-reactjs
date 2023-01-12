@@ -10,7 +10,7 @@ import ReactStars from "react-rating-stars-component";
 import { coursesData } from "../../data/home/coursesData";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";
-const Swip = () => {
+const HighestSellingCourses = () => {
   return (
     <div className="container">
       <div className="py-8 xl:py-10 gap-6 xl:gap-8">
@@ -91,4 +91,4 @@ const Swip = () => {
   );
 };
 
-export default Swip;
+export default HighestSellingCourses;

@@ -6,8 +6,6 @@ import javascript from "../../assets/images/courses/javascript.webp";
 import amazonweb from "../../assets/images/courses/amazon.webp";
 import machine from "../../assets/images/courses/machine.webp";
 import amazonsecurity from "../../assets/images/courses/amazonsecurity.webp";
-// import starfull from "../../assets/images/courses/star.webp";
-// import starhalf from "../../assets/images/courses/star-half.webp";
 
 const coursesData = [
   {

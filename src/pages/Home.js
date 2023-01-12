@@ -2,8 +2,12 @@ import Courses from '../components/home/Courses';
 import ExploreCoursers from '../components/home/ExploreCoursers';
 import FreeCourses from '../components/home/FreeCourses';
 import HeroSection from '../components/home/HeroSection';
+import HighestSellingCourses from '../components/home/HighestSellingCourses';
+import ShortCourses from '../components/home/ShortCourses';
 import Skills from '../components/home/Skills';
+import SubjectArea from '../components/home/SubjectArea';
 import Swip from '../components/home/Swip';
+import BecomeInstructor from '../components/share/BecomeInstructor';
 
 
 const Home = () => {
@@ -11,10 +15,14 @@ const Home = () => {
         <div>
             <HeroSection />
             <Skills />
-            {/* <Courses /> */}
-          <Swip />
             <ExploreCoursers />
+            {/* <Courses /> */}
+            <SubjectArea />
+          {/* <Swip /> */}
+            <HighestSellingCourses />
             <FreeCourses />
+            <ShortCourses />
+            <BecomeInstructor />
         </div>
     );
 };

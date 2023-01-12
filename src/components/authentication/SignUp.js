@@ -2,7 +2,7 @@ import React from 'react';
 
 import google from '../../assets/images/svg/gogle.svg'
 import facebook from '../../assets/images/svg/facebook1.svg'
-import twitter from '../../assets/images/svg/facebook1.svg'
+import twitter from '../../assets/images/svg/twitter1.svg'
 
 const SignUp = () => {
     return (

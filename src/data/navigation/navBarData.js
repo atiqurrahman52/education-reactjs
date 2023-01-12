@@ -47,7 +47,7 @@ const categoriesData = [
   },
   {
     id: 1,
-    categoryTitle: "Design",
+    categoryTitle: "Business",
     categories: [
       {
         id: 0,
@@ -92,8 +92,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 2,
+    categoryTitle: "Development",
     categories: [
       {
         id: 0,
@@ -138,8 +138,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 3,
+    categoryTitle: "Data Science",
     categories: [
       {
         id: 0,
@@ -184,8 +184,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 4,
+    categoryTitle: "Health",
     categories: [
       {
         id: 0,
@@ -230,8 +230,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 5,
+    categoryTitle: "Health & Fitness",
     categories: [
       {
         id: 0,
@@ -276,8 +276,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 6,
+    categoryTitle: "Lifestyle",
     categories: [
       {
         id: 0,
@@ -322,8 +322,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 7,
+    categoryTitle: "Marketing",
     categories: [
       {
         id: 0,
@@ -368,8 +368,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 8,
+    categoryTitle: "Photography",
     categories: [
       {
         id: 0,
@@ -414,8 +414,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 9,
+    categoryTitle: "Teaching",
     categories: [
       {
         id: 0,
@@ -460,8 +460,8 @@ const categoriesData = [
     ],
   },
   {
-    id: 0,
-    categoryTitle: "Art & Design",
+    id: 10,
+    categoryTitle: "Music",
     categories: [
       {
         id: 0,

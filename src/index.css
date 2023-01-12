@@ -16,35 +16,43 @@
     border: 1px solid red;
 } */
 
+/* explore started  */
 .body_scroll_lock {
-    overflow: hidden;
-  }
-  
-  .mobile_content_switch {
-    right: 0 !important;
-  }
-  
-  .explore-menu:hover .explore-btn {
-    @apply text-success;
-  }
-  .explore-menu:hover .mega-menu {
-    @apply visible opacity-100 scale-100;
-  }
-  
-  .navigation ul ul ul {
-    @apply top-0 right-0;
-  }
-  .navigation ul li:hover > ul {
-    @apply visible;
-  }
-  .navigation ul ul {
-    @apply top-0 left-full invisible absolute;
-  }
-  
-  .navigation ul li a:hover {
-    @apply text-success;
-  }
-  .navigation > ul > li:hover > button {
-    @apply text-success;
-  }
-  
+  overflow: hidden;
+}
+
+.mobile_content_switch {
+  right: 0 !important;
+}
+
+.explore-menu:hover .explore-btn {
+  @apply text-success;
+}
+.explore-menu:hover .mega-menu {
+  @apply visible opacity-100 scale-100;
+}
+
+.navigation ul ul ul {
+  @apply top-0 right-0;
+}
+.navigation ul li:hover > ul {
+  @apply visible;
+}
+.navigation ul ul {
+  @apply top-0 left-full invisible absolute;
+}
+
+.navigation ul li a:hover {
+  @apply text-success;
+}
+.navigation > ul > li:hover > button {
+  @apply text-success;
+}
+
+/* explore end  */
+
+/* Background image started  */
+   .instructor-bg{
+    background-image: url('../src/assets/images/instructor/instructor.webp');
+   }
+/* Background image started  */
