@@ -62,7 +62,7 @@ const Footer = () => {
                 Contact Us
               </Link>
               <Link
-                to="#"
+                to="/about"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 About Us

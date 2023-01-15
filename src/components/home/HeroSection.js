@@ -36,7 +36,7 @@ const HeroSection = () => {
                 <button
                   onClick={() => setIsModalVisible(true)}
                   type=""
-                  className="preview-btn  font-medium text-xs xl:text-base leading-5 xl:leading-6 capitalize text-primary flex items-center gap-2"
+                  className="font-medium text-xs xl:text-base leading-5 xl:leading-6 capitalize text-primary flex items-center gap-2"
                 >
                   <svg
                     width="40"

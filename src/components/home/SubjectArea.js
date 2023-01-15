@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'phosphor-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { subjectsAreasData } from '../../data/home/subjectsAreasData';
 
 const SubjectArea = () => {
@@ -16,8 +17,8 @@ const SubjectArea = () => {
           >
            {subjectsAreasData.map(({id,icon,name}) =>{
             return (
-              <a
-              href=""
+              <Link key={id}
+              to='#'
               class="flex justify-between rounded-md items-center py-2.5 xl:py-5 px-4 bg-tertiary w-full"
             >
               <div class="flex items-center gap-4">
@@ -32,7 +33,7 @@ const SubjectArea = () => {
 
               {/* <i class="ph-arrow-up-right text-success text-2xl"></i> */}
               <ArrowUpRight size={24} className='text-success' />
-            </a>
+            </Link>
             )
            })
            }
