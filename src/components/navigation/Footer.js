@@ -56,13 +56,13 @@ const Footer = () => {
                 Home
               </Link>
               <Link
-                to="#"
+                to="/contact-us"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Contact Us
               </Link>
               <Link
-                to="/about"
+                to="/about-us"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 About Us
@@ -98,7 +98,7 @@ const Footer = () => {
                 Payment Methods
               </Link>
               <Link
-                to="#"
+                to="/sitemap"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Sitemap

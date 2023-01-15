@@ -1,13 +1,13 @@
-import { ArrowUpRight } from "phosphor-react";
-import React from "react";
-import { Link } from "react-router-dom";
-import { subjectsAreasData } from "../../data/home/subjectsAreasData";
+import { ArrowUpRight } from 'phosphor-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { subjectsAreasData } from '../../data/home/subjectsAreasData';
 
-const SubjectArea = () => {
-  return (
-    <div class="container">
+const SubjectAreas = () => {
+    return (
+        <div class="container">
       <div class="py-8 xl:py-10">
-        <h1 class="font-poppins font-normal text-base xl:text-4xl leading-6 text-primary mb-6 xl:mb-8">
+        <h1 class="font-poppins  text-base xl:text-2xl leading-6 text-primary mb-6 xl:mb-8">
           <span class="font-semibold">Subject </span> Areas
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xl:gap-6">
@@ -32,7 +32,7 @@ const SubjectArea = () => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default SubjectArea;
+export default SubjectAreas;
