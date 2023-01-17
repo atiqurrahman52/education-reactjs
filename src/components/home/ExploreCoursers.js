@@ -15,7 +15,7 @@ const ExploreCoursers = () => {
             return (
               <div key={id}>
                 <Link
-                  to="#"
+                  to="/course-details"
                   className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
                 >
                   <div className="mb-4">

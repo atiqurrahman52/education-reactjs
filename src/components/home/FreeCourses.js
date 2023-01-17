@@ -5,7 +5,7 @@ import { coursesData } from '../../data/home/coursesData';
 
 const FreeCourses = () => {
     return (
-        <div>
+  
             <div class="container">
           <div class="py-6 xl:py-16 gap-6 xl:gap-8">
             <h3
@@ -73,7 +73,7 @@ const FreeCourses = () => {
             </div>
           </div>
         </div>
-        </div>
+       
     );
 };
 

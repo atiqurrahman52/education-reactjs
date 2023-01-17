@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const AuthContext = createContext();
 
 const SharedStates = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const allContexts = { isLoggedIn, setIsLoggedIn };
 

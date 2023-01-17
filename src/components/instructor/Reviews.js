@@ -17,11 +17,7 @@ const Reviews = () => {
     <div className="container">
      
         <div class="gap-4 xl:gap-8 py-6 xl:py-10">
-            <h1
-              class="font-poppins text-base xl:text-3xl leading-6 text-primary capitalize text-center mb-4 xl:mb-8"
-            >
-              <span class="font-semibold">Featured Course </span> this month
-            </h1>
+          
         <Swiper
           slidesPerView="auto"
           breakpoints={{

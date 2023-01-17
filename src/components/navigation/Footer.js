@@ -80,13 +80,13 @@ const Footer = () => {
               </h1>
 
               <Link
-                to="#"
+                to="/privacy"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Privacy policy
               </Link>
               <Link
-                to="#"
+               to="/privacy"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Terms and Condition

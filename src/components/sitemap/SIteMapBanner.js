@@ -3,7 +3,7 @@ import React from "react";
 const SIteMapBanner = () => {
   return (
     <div class="breadcrumb bg-cover bg-center bg-no-repeat h-[250px] mt-[px]">
-      <div class="container xl:px-[190px]">
+      <div class="container">
         <div class="flex items-center pt-6">
           <p class="text-primary font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
             Sitemap
