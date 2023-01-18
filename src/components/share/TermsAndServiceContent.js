@@ -16,7 +16,7 @@ const TermsAndServiceContent = ({ data }) => {
         <h3 className="font-poppins font-medium text-lg leading-[27px] mb-2">
           {summaryTitle}
         </h3>
-        <p className="font-poppins text-sm xl:text-base leading-[21px] xl:leading-6 text-primary opacity-[0.8] mb-4">
+        <p className="text-sm whitespace-pre-line xl:text-base leading-[21px] xl:leading-6 text-primary opacity-[0.8] mb-4">
           {summaryDetails}
         </p>
       </div>
@@ -42,7 +42,7 @@ const TermsAndServiceContent = ({ data }) => {
             <h3 className="font-poppins font-medium text-lg leading-[27px] mb-2">
               {title}
             </h3>
-            <p className="font-poppins text-sm xl:text-base leading-[21px] xl:leading-6 text-primary opacity-[0.8] mb-4">
+            <p className="font-poppins whitespace-pre-line text-sm xl:text-base leading-[21px] xl:leading-6 text-primary opacity-[0.8] mb-4">
               {info}
             </p>
           </div>

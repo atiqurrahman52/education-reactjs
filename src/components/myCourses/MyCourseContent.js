@@ -2106,7 +2106,7 @@ const MyCourseContent = () => {
           </div>
 
            {/* scrollbar started   */}
-          <div class="col-span-12 lg:col-span-4 border">
+          <div class="col-span-12 lg:col-span-4">
             <div class="lg:block xs:hidden">
               <h1
                 class="font-poppins font-medium text-2xl leading-[36px] text-primary"

@@ -178,3 +178,62 @@
 .prevbtn:after {
   font-size: 16px !important;
 }
+
+
+/* Accordion started  */
+.acc {
+  margin-bottom: 10px;
+}
+
+.acc-head {
+  padding: 15px 10px;
+  font-size: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.acc-head::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: black;
+  line-height: 18px;
+  height: 24px;
+}
+
+.acc-head::after {
+  content: "+";
+}
+.acc-head.active:after {
+  content: "-";
+  font-size: 46px;
+  line-height: 10px;
+}
+
+.acc-content {
+  padding: 15px 10px;
+  display: none;
+}
+
+/* Accordion end  */
+
+/* scrollbar started  */
+/* width */
+.scrollbar-main::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.scrollbar-main::-webkit-scrollbar-track {
+  background-color: #eaeaea;
+}
+
+/* Handle */
+.scrollbar-main::-webkit-scrollbar-thumb {
+  background: #9da6ba;
+}
+
+
+/* scrollbar end  */

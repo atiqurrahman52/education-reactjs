@@ -39,7 +39,7 @@ const instructorData = [
     ],
   },
   {
-    id: 0,
+    id: 2,
     tab: "Start with Courses",
     img: instructorImg,
     content: [

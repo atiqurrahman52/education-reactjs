@@ -8,7 +8,7 @@ const Instructor = () => {
     return (
         <div>
             <InstructorBanner />
-            {/* <BecomeInstructor /> */}
+            <BecomeInstructor />
             <Reviews />
             <CareerSteps />
         </div>

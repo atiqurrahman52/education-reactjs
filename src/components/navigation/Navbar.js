@@ -15,6 +15,12 @@ import global from "../../assets/images/svg/global.svg";
 import bell from "../../assets/images/svg/Bell_pin.svg";
 import mobileLogo from "../../assets/images/logo/mobile-logo.png";
 import { Link } from "react-router-dom";
+import { coursesCartData } from "../../data/myCourses/myCourseCartData";
+import { cartData } from "../../data/cartData.js/cartData";
+import { notificationData } from "../../data/notification/notificationData";
+import notification1 from '../../assets/images/notification/image1.webp';
+import notification2 from '../../assets/images/notification/image2.webp';
+import userImg from '../../assets/images/logo/user.png';
 
 const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -28,7 +34,7 @@ const Navbar = () => {
       <nav className="hidden lg:block">
         {/*  main navigation  */}
         <div className="flex flex-wrap items-center justify-between w-full py-5 px-2 xl:px-8 bg-white relative border-b-[0.5px] border-[#EBEBEB]">
-          <Link to='/' className="w-[70px] xl:w-[86px] h-[47px]">
+          <Link to="/" className="w-[70px] xl:w-[86px] h-[47px]">
             <img src={logo} alt="" />
           </Link>
 
@@ -96,12 +102,12 @@ const Navbar = () => {
               </Link>
 
               <div className="relative group">
-                <a
-                  href="/"
+                <p
+                  
                   className=" text-sm xl:text-base leading-6 text-primary capitalize"
                 >
                   My Courses
-                </a>
+                </p>
                 <div className="hidden absolute group-hover:block right-0 pt-[33px]">
                   <div className="w-[375px] max-h-[434px] bg-white p-6 shadow-md rounded-[4px]">
                     <h3 className=" text-lg leading-[27px] text-primary border-b border-[#DADADA] pb-4">
@@ -109,22 +115,23 @@ const Navbar = () => {
                     </h3>
                     <div className="space-y-4">
                       <ul className="max-h-[300px] overflow-y-auto scrollbar-main">
-                        {[...Array(10)].map((item, i) => (
-                          <li>
-                            <a
-                              href="./pages/mycourse.html"
-                              className="flex space-x-2 border-b border-[#EDEDED] py-4"
-                            >
-                              <img
-                                src="./assets/images/checkout/checkout.webp"
-                                alt=""
-                              />
-                              <p className=" font-medium text-base leading-6 text-primary">
-                                Angular - The Complete Guide (2020 Edition)
-                              </p>
-                            </a>
-                          </li>
-                        ))}
+                         {coursesCartData.map(({id,img,courseName}) =>
+                          <li key={id}>
+                          <Link
+                            to="/my-course"
+                            className="flex space-x-2 border-b border-[#EDEDED] py-4"
+                          >
+                            <img
+                              src={img}
+                              alt=""
+                            />
+                            <p className=" font-medium text-base leading-6 text-primary">
+                             {courseName}
+                            </p>
+                          </Link>
+                        </li>
+                         )}
+                       
                       </ul>
                     </div>
                   </div>
@@ -235,162 +242,35 @@ const Navbar = () => {
                 <div className="hidden absolute group-hover:block right-0 pt-8">
                   <div className="p-6 w-[367px] rounded-[4px] bg-white shadow-md">
                     <ul className="max-h-[300px] overflow-y-auto scrollbar-main">
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-4 border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-sm leading-[21px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
+                     {cartData.map(({id,img,courseName,price,description}) =>
+                      <li key={id}>
+                      <Link
+                        to="/course-details"
+                        className="flex space-x-4 border-[#EDEDED] py-4"
+                      >
+                        <div>
+                          <img
+                            src={img}
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <p className=" text-sm leading-[21px] text-primary">
+                           {courseName}
+                          </p>
+                          <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
+                            {description}
+                          </p>
+                        </div>
+                        <div className="flex items-end">
+                          <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
+                            $ {price}
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+                   
+                     )}
                     </ul>
 
                     <div className="flex justify-between py-4">
@@ -430,6 +310,9 @@ const Navbar = () => {
                         You have 4 unread messages
                       </p>
                     </div>
+                  
+                  
+                     
                     <div className="border-b border-[#E5E8EB] pb-4">
                       <p className=" font-semibold text-xs leading-[18px] text-disable py-3">
                         New
@@ -439,7 +322,7 @@ const Navbar = () => {
                         <div className="flex space-x-4">
                           <div>
                             <img
-                              src="./assets/images/notification/image1.webp"
+                              src={notification1}
                               alt=""
                             />
                           </div>
@@ -462,7 +345,7 @@ const Navbar = () => {
                         <div className="flex space-x-4">
                           <div>
                             <img
-                              src="./assets/images/notification/image2.webp"
+                              src={notification2}
                               alt=""
                             />
                           </div>
@@ -485,7 +368,7 @@ const Navbar = () => {
                         <div className="flex space-x-4">
                           <div>
                             <img
-                              src="./assets/images/notification/image1.webp"
+                              src={notification1}
                               alt=""
                             />
                           </div>
@@ -514,7 +397,7 @@ const Navbar = () => {
                         <div className="flex space-x-4">
                           <div>
                             <img
-                              src="./assets/images/notification/image1.webp"
+                              src={notification1}
                               alt=""
                             />
                           </div>
@@ -535,6 +418,9 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
+                  
+                 
+
                   </div>
                 </div>
               </div>
@@ -542,13 +428,13 @@ const Navbar = () => {
               <div className="relative group">
                 <User
                   size={28}
-                  className="text-primary bg-[#F1F1F2] rounded-[38px] p-1"
+                  className="text-primary bg-[#F1F1F2] rounded-[38px] p-[3px]"
                 />
                 <div className="hidden absolute group-hover:block right-0 pt-7">
                   <div className="w-[240px] py-6 px-3 border border-[#F1F1F2] bg-white rounded-md">
                     <div className="flex items-center space-x-3 pb-4 border-b border-[#F1F1F2]">
                       <div>
-                        <img src="./assets/images/logo/user.png" alt="" />
+                        <img src={userImg} alt="" />
                       </div>
                       <div>
                         <h3 className=" font-semibold text-sm text-disable leading-5">
@@ -562,12 +448,12 @@ const Navbar = () => {
 
                     <div className="pt-4">
                       <div className="flex flex-col space-y-2 border-b border-[#F1F1F2] pb-2">
-                        <a
-                          href="./pages/mycourse.html"
+                        <Link
+                          to="/my-course"
                           className=" text-sm leading-5 text-disable py-2.5 px-4"
                         >
                           My Courses
-                        </a>
+                        </Link>
                         <a
                           href="./pages/my-profile.html"
                           className=" text-sm leading-5 text-disable py-2.5 px-4"
@@ -649,7 +535,7 @@ const Navbar = () => {
                 to="/instructor"
                 className=" text-sm xl:text-base leading-6 text-primary capitalize"
               >
-                Become an Instructor
+                Become an Instructor 
               </Link>
 
               <div className="relative group">
@@ -759,7 +645,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-               to="/sign-up"
+                to="/sign-up"
                 className=" text-sm xl:text-base leading-6 text-[#3789FF] border border-[#3789FF] rounded-lg py-2 px-4 capitalize"
               >
                 Join Us
@@ -771,7 +657,7 @@ const Navbar = () => {
 
       {/* mobile  */}
       <section>
-        {/*  mobile-top-bar  */}
+        {/*  mobile-top-bar started  */}
         <div className="lg:hidden w-full mobile-top-bar sticky top-0 left-0 bg-white drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)] z-20">
           <div className="flex justify-between px-4 py-4">
             <div>
@@ -784,7 +670,6 @@ const Navbar = () => {
                 className="mobile-menu-button"
                 data-action="search-menu"
                 onClick={() => setSearch(true)}
-                
               >
                 <MagnifyingGlass size={24} className="text-disable" />
               </button>
@@ -895,7 +780,7 @@ const Navbar = () => {
                 </div>
               </div>
               <button
-              onClick={() => setMainMenu(true)}
+                onClick={() => setMainMenu(true)}
                 type="button"
                 className="mobile-menu-button"
                 data-action="profile-menu"
@@ -905,9 +790,14 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+            {/*  mobile-top-bar end  */}
 
         {/*  search  */}
-        <div className={`${search ? 'right-0' : 'right-full'} fixed top-0 w-full h-14 bg-white z-30 transition-all duration-300 mobile_menu_content search-menu`}>
+        <div
+          className={`${
+            search ? "right-0" : "right-full"
+          } fixed top-0 w-full h-14 bg-white z-30 transition-all duration-300 mobile_menu_content search-menu`}
+        >
           <div className="flex justify-between px-4 py-4 space-x-4">
             <div>
               <img src={mobileLogo} alt="" />
@@ -925,14 +815,22 @@ const Navbar = () => {
               />
             </label>
 
-            <button onClick={() => setSearch(false)} type="button" className="close-menu">
+            <button
+              onClick={() => setSearch(false)}
+              type="button"
+              className="close-menu"
+            >
               <X size={24} className=" text-disable" />
             </button>
           </div>
         </div>
 
         {isLoggedIn ? (
-          <div className={`${mainMenu ? 'right-0' : 'right-full'} fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}>
+          <div
+            className={`${
+              mainMenu ? "right-0" : "right-full"
+            } fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}
+          >
             <div className="flex justify-between px-4 py-4 drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
               <div>
                 <img
@@ -1059,14 +957,14 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <div className={`${mainMenu ? 'right-0' : 'right-full'} fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}>
+          <div
+            className={`${
+              mainMenu ? "right-0" : "right-full"
+            } fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}
+          >
             <div className="flex justify-between gap-6 px-4 py-4 border-b border-[#F6F6F6]">
               <div>
-                <img
-                  className="w-[32px] h-[32px]"
-                  src={mobileLogo}
-                  alt=""
-                />
+                <img className="w-[32px] h-[32px]" src={mobileLogo} alt="" />
               </div>
               <label for="search" className="relative h-8 w-full">
                 <button className="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
@@ -1081,23 +979,25 @@ const Navbar = () => {
                 />
               </label>
               <button type="button" className="close-menu">
-               
-                <X size={30} onClick={() => setMainMenu(false)} className='text-disable' />
-              
+                <X
+                  size={30}
+                  onClick={() => setMainMenu(false)}
+                  className="text-disable"
+                />
               </button>
             </div>
 
             <div className="py-6 px-3 shadow-[0_11px_12px_rgba(62,65,74,0.1)]">
               <div className="pt-3">
                 <div className="flex flex-col space-y-">
-                  <Link to='/sign-up'
-                    
+                  <Link
+                    to="/sign-up"
                     className=" font-medium text-xs leading-5 text-success  px-4"
                   >
                     Jon US
                   </Link>
                   <Link
-                    to='/sign-in'
+                    to="/sign-in"
                     className=" font-medium text-xs leading-5 text-success py-6  px-4"
                   >
                     Login
