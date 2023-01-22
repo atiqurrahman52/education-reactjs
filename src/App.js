@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import Instructor from "./pages/Instructor";
 import MyCourses from "./pages/MyCourses";
 import Sitemap from "./pages/Sitemap";
+import Checkout from "./components/checkout/Checkout";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/all-courses" element={<AllCourses />} />
         <Route path="/my-course" element={<MyCourses />} />
         <Route path="/course-details" element={<CourseDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/sitemap" element={<Sitemap />} />

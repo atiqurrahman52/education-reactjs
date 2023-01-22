@@ -18,14 +18,15 @@ import { Link } from "react-router-dom";
 import { coursesCartData } from "../../data/myCourses/myCourseCartData";
 import { cartData } from "../../data/cartData.js/cartData";
 import { notificationData } from "../../data/notification/notificationData";
-import notification1 from '../../assets/images/notification/image1.webp';
-import notification2 from '../../assets/images/notification/image2.webp';
-import userImg from '../../assets/images/logo/user.png';
+import notification1 from "../../assets/images/notification/image1.webp";
+import notification2 from "../../assets/images/notification/image2.webp";
+import userImg from "../../assets/images/logo/user.png";
 
 const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
   const [search, setSearch] = useState(false);
   const [mainMenu, setMainMenu] = useState(false);
+  const [explore, setExplore] = useState(false);
 
   return (
     <header className="sticky w-full top-0 left-0 z-50">
@@ -102,10 +103,7 @@ const Navbar = () => {
               </Link>
 
               <div className="relative group">
-                <p
-                  
-                  className=" text-sm xl:text-base leading-6 text-primary capitalize"
-                >
+                <p className=" text-sm xl:text-base leading-6 text-primary capitalize">
                   My Courses
                 </p>
                 <div className="hidden absolute group-hover:block right-0 pt-[33px]">
@@ -115,23 +113,19 @@ const Navbar = () => {
                     </h3>
                     <div className="space-y-4">
                       <ul className="max-h-[300px] overflow-y-auto scrollbar-main">
-                         {coursesCartData.map(({id,img,courseName}) =>
+                        {coursesCartData.map(({ id, img, courseName }) => (
                           <li key={id}>
-                          <Link
-                            to="/my-course"
-                            className="flex space-x-2 border-b border-[#EDEDED] py-4"
-                          >
-                            <img
-                              src={img}
-                              alt=""
-                            />
-                            <p className=" font-medium text-base leading-6 text-primary">
-                             {courseName}
-                            </p>
-                          </Link>
-                        </li>
-                         )}
-                       
+                            <Link
+                              to="/my-course"
+                              className="flex space-x-2 border-b border-[#EDEDED] py-4"
+                            >
+                              <img src={img} alt="" />
+                              <p className=" font-medium text-base leading-6 text-primary">
+                                {courseName}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -242,35 +236,33 @@ const Navbar = () => {
                 <div className="hidden absolute group-hover:block right-0 pt-8">
                   <div className="p-6 w-[367px] rounded-[4px] bg-white shadow-md">
                     <ul className="max-h-[300px] overflow-y-auto scrollbar-main">
-                     {cartData.map(({id,img,courseName,price,description}) =>
-                      <li key={id}>
-                      <Link
-                        to="/course-details"
-                        className="flex space-x-4 border-[#EDEDED] py-4"
-                      >
-                        <div>
-                          <img
-                            src={img}
-                            alt=""
-                          />
-                        </div>
-                        <div>
-                          <p className=" text-sm leading-[21px] text-primary">
-                           {courseName}
-                          </p>
-                          <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                            {description}
-                          </p>
-                        </div>
-                        <div className="flex items-end">
-                          <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                            $ {price}
-                          </p>
-                        </div>
-                      </Link>
-                    </li>
-                   
-                     )}
+                      {cartData.map(
+                        ({ id, img, courseName, price, description }) => (
+                          <li key={id}>
+                            <Link
+                              to="/course-details"
+                              className="flex space-x-4 border-[#EDEDED] py-4"
+                            >
+                              <div>
+                                <img src={img} alt="" />
+                              </div>
+                              <div>
+                                <p className=" text-sm leading-[21px] text-primary">
+                                  {courseName}
+                                </p>
+                                <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
+                                  {description}
+                                </p>
+                              </div>
+                              <div className="flex items-end">
+                                <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
+                                  $ {price}
+                                </p>
+                              </div>
+                            </Link>
+                          </li>
+                        )
+                      )}
                     </ul>
 
                     <div className="flex justify-between py-4">
@@ -282,9 +274,9 @@ const Navbar = () => {
                       </p>
                     </div>
                     <div className="pt-2 w-full text-center  font-medium text-base leading-5 text-white bg-success py-[9px] rounded-[3px]">
-                      <a href="./pages/checkout.html" className="" type="">
-                        Check Out
-                      </a>
+                      <Link to="/checkout" className="" type="">
+                        Check Out 
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -310,9 +302,7 @@ const Navbar = () => {
                         You have 4 unread messages
                       </p>
                     </div>
-                  
-                  
-                     
+
                     <div className="border-b border-[#E5E8EB] pb-4">
                       <p className=" font-semibold text-xs leading-[18px] text-disable py-3">
                         New
@@ -321,10 +311,7 @@ const Navbar = () => {
                       <div className="space-y-4">
                         <div className="flex space-x-4">
                           <div>
-                            <img
-                              src={notification1}
-                              alt=""
-                            />
+                            <img src={notification1} alt="" />
                           </div>
                           <div>
                             <p className=" font-semibold text-sm text-primary leading-[22px]">
@@ -344,10 +331,7 @@ const Navbar = () => {
 
                         <div className="flex space-x-4">
                           <div>
-                            <img
-                              src={notification2}
-                              alt=""
-                            />
+                            <img src={notification2} alt="" />
                           </div>
                           <div>
                             <p className=" font-semibold text-sm text-primary leading-[22px]">
@@ -367,10 +351,7 @@ const Navbar = () => {
 
                         <div className="flex space-x-4">
                           <div>
-                            <img
-                              src={notification1}
-                              alt=""
-                            />
+                            <img src={notification1} alt="" />
                           </div>
                           <div>
                             <p className=" font-semibold text-sm text-primary leading-[22px]">
@@ -396,10 +377,7 @@ const Navbar = () => {
                       <div className="space-y-4">
                         <div className="flex space-x-4">
                           <div>
-                            <img
-                              src={notification1}
-                              alt=""
-                            />
+                            <img src={notification1} alt="" />
                           </div>
                           <div>
                             <p className=" font-semibold text-sm text-primary leading-[22px]">
@@ -418,9 +396,6 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
-                  
-                 
-
                   </div>
                 </div>
               </div>
@@ -535,7 +510,7 @@ const Navbar = () => {
                 to="/instructor"
                 className=" text-sm xl:text-base leading-6 text-primary capitalize"
               >
-                Become an Instructor 
+                Become an Instructor
               </Link>
 
               <div className="relative group">
@@ -790,7 +765,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-            {/*  mobile-top-bar end  */}
+        {/*  mobile-top-bar end  */}
 
         {/*  search  */}
         <div
@@ -804,7 +779,7 @@ const Navbar = () => {
             </div>
             <label for="search" className="relative h-8 w-full">
               <button className="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
-                <MagnifyingGlass size={24} className="py-2 pl-1" />
+                <MagnifyingGlass size={24} className="pl-1" />
               </button>
 
               <input
@@ -831,18 +806,20 @@ const Navbar = () => {
               mainMenu ? "right-0" : "right-full"
             } fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}
           >
-            <div className="flex justify-between px-4 py-4 drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
+            {/* <div className="flex justify-between px-4 py-4 drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
               <div>
+                
                 <img
                   className="w-[32px] h-[32px]"
-                  src="./assets/images/logo/mobile-logo.png"
+                  src={mobileLogo}
                   alt=""
                 />
               </div>
-              <div className="flex items-center space-x-4">
-                <label for="search" className="relative h-8 w-[193px]">
+              <div className="flex items-center space-x-4 ">
+                <label for="search" className="relative h-8 w-full">
                   <button className="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
-                    <i className="ph-magnifying-glass text-base p-1"></i>
+                  <MagnifyingGlass size={24} className='text-base p-1' />
+                    
                   </button>
 
                   <input
@@ -852,16 +829,41 @@ const Navbar = () => {
                     placeholder="Search anything"
                   />
                 </label>
-                <button type="button" className="close-menu">
-                  <i className="ph-x text-[32px] text-disable"></i>
+                <button
+                 onClick={() => setMainMenu(false)}
+                 type="button" className="close-menu">
+                <X size={24} className='text-disable' />
+                
                 </button>
               </div>
+            </div> */}
+
+            <div class="flex justify-between px-4 py-4 space-x-4 shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
+              <div>
+                <img className="w-[32px] h-[32px]" src={mobileLogo} alt="" />
+              </div>
+              <label for="search" class="relative h-8 w-full">
+                <button class="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
+                  <i class="ph-magnifying-glass text-base py-2 pl-1"></i>
+                </button>
+
+                <input
+                  class="text-xs w-full h-full pl-10 pr-7 leading-4 placeholder:text-[#DCDCDC] text-black outline-none bg-transparent rounded-[32px] border-[1px] border-[#D7D9DF]"
+                  type="text"
+                  id="search"
+                  placeholder="Search anything"
+                />
+              </label>
+
+              <button type="button" class="close-menu">
+                <i class="ph-x text-[32px] text-disable"></i>
+              </button>
             </div>
 
             <div className="py-6 px-3 shadow-[0_11px_12px_rgba(62,65,74,0.1)]">
               <div className="flex items-center space-x-3 p-3 bg-[#F8F8F8] rounded-[4px]">
                 <div>
-                  <img src="./assets/images/logo/user.png" alt="" />
+                  <img src={userImg} alt="" />
                 </div>
                 <div>
                   <h3 className=" font-semibold text-sm text-primary leading-[22px]">
