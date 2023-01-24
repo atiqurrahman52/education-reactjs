@@ -68,7 +68,7 @@ const Footer = () => {
                 About Us
               </Link>
               <Link
-                to="#"
+                to="/all-courses"
                 className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
               >
                 Courses

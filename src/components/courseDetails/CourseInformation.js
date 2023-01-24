@@ -11,6 +11,7 @@ const CourseInformation = () => {
       <LayoutContext.Provider>
         <div className="demo" class="col-span-8">
           <Navigation />
+          
           <Section
             id="Overview"
             color="red"
@@ -193,6 +194,7 @@ const CourseInformation = () => {
               </div>
             </div>
           </Section>
+
           <Section
             id="Content"
             color="blue"

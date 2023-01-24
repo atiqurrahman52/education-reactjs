@@ -17,6 +17,14 @@ import Instructor from "./pages/Instructor";
 import MyCourses from "./pages/MyCourses";
 import Sitemap from "./pages/Sitemap";
 import Checkout from "./components/checkout/Checkout";
+import Profile from "./components/userDashboard/Profile";
+import OrderHistory from "./components/userDashboard/OrderHistory";
+import Payment from "./components/userDashboard/Payment";
+import Certificate from "./components/userDashboard/Certificate";
+import Language from "./components/userDashboard/Language";
+import PasswordSetting from "./components/userDashboard/PasswordSetting";
+import MyNotification from "./components/userDashboard/MyNotification";
+import RemoveAccount from "./components/userDashboard/RemoveAccount";
 
 function App() {
   return (
@@ -36,6 +44,14 @@ function App() {
         <Route path="/privacy" element={<TermsAndServices />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/tab" element={<Tab />} />
+        <Route path="/my-profile" element={<Profile />} />
+        <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/certificate" element={<Certificate/>} />
+        <Route path="/language" element={<Language />} />
+        <Route path="/password-setting" element={<PasswordSetting />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/my-notification" element={<MyNotification />} />
+        <Route path="/remove-account" element={<RemoveAccount />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

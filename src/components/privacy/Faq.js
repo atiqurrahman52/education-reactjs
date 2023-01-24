@@ -28,6 +28,7 @@ const Faq = () => {
                     <Plus size={24} />
                   )}
                 </div>
+                
                 {id === accordionActive && (
                   <p
                     key={id}

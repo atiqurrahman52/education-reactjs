@@ -241,11 +241,11 @@ const Navbar = () => {
                           <li key={id}>
                             <Link
                               to="/course-details"
-                              className="flex space-x-4 border-[#EDEDED] py-4"
+                              className="flex space-x-4 border-b border-[#EDEDED] py-4"
                             >
                               <div>
                                 <img src={img} alt="" />
-                              </div>
+                              </div>  
                               <div>
                                 <p className=" text-sm leading-[21px] text-primary">
                                   {courseName}
@@ -275,7 +275,7 @@ const Navbar = () => {
                     </div>
                     <div className="pt-2 w-full text-center  font-medium text-base leading-5 text-white bg-success py-[9px] rounded-[3px]">
                       <Link to="/checkout" className="" type="">
-                        Check Out 
+                        Check Out
                       </Link>
                     </div>
                   </div>
@@ -429,76 +429,76 @@ const Navbar = () => {
                         >
                           My Courses
                         </Link>
-                        <a
-                          href="./pages/my-profile.html"
+                        <Link
+                          to="/my-profile"
                           className=" text-sm leading-5 text-disable py-2.5 px-4"
                         >
                           My profile
-                        </a>
+                        </Link>
                       </div>
                     </div>
 
                     <div className="flex flex-col space-y-2 border-b-[1px] border-[#F1F1F2] pb-2">
-                      <a
-                        href="./pages/payment.html"
+                      <Link
+                        to="/payment"
                         className=" text-sm leading-5 text-disable py-2.5 px-4 pt-5"
                       >
                         Payment method
-                      </a>
-                      <a
-                        href="./pages/terms.html"
+                      </Link>
+                      <Link
+                        to="/privacy"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Privacy
-                      </a>
-                      <a
-                        href="./pages/my-notification.html"
+                      </Link>
+                      <Link
+                        to="/my-notification"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Notification
-                      </a>
-                      <a
-                        href="./pages/password-setting.html"
-                        className=" text-sm leading-5 text-disable py-2.5 px-4"
+                      </Link>
+                      <Link
+                        to="/password-setting"
+                        className="text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Passward Setting
-                      </a>
-                      <a
-                        href="./pages/language.html"
+                      </Link>
+                      <Link
+                        to="/language"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Language
-                      </a>
-                      <a
-                        href="../pages/order-history.html"
+                      </Link>
+                      <Link
+                        to="/order-history"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Order History
-                      </a>
+                      </Link>
                     </div>
 
                     <div className="flex flex-col space-y-0 border-b-[1px] border-[#F1F1F2] my-2 pb-1">
-                      <a
-                        href="./pages/remove-account.html"
+                      <Link
+                        to="/remove-account"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Remove Account
-                      </a>
-                      <a
-                        href="/"
+                      </Link>
+                      <Link
+                        to="#"
                         className=" text-sm leading-5 text-disable py-2.5 px-4"
                       >
                         Help
-                      </a>
+                      </Link>
                     </div>
 
                     <div className="pt-1">
-                      <a
-                        href="../index.html"
+                      <Link
+                        to='/'
                         className=" text-sm leading-5 text-disable py-2.5 px-4 my-2"
                       >
                         Log out
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -652,90 +652,36 @@ const Navbar = () => {
               <div className="relative group">
                 <ShoppingCart size={24} className="text-disable" />
 
-                <div className="hidden absolute group-hover:block right-[-50px] pt-5">
+                <div className="hidden absolute group-hover:block right-[-50px] pt-[22px]">
                   <div className="px-6 py-8 w-[320px] rounded-[4px] bg-white shadow-md">
                     <ul className="max-h-[300px] overflow-y-auto scrollbar-main">
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-2 border-b border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              className="w-[60px] h-[39px]"
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-xs leading-[18px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-2">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end pl-5">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67] pl-">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-2 border-b border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              className="w-[60px] h-[39px]"
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-xs leading-[18px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-2">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end pl-5">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67] pl-">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="./pages/course-details.html"
-                          className="flex space-x-2 border-b border-[#EDEDED] py-4"
-                        >
-                          <div>
-                            <img
-                              className="w-[60px] h-[39px]"
-                              src="./assets/images/checkout/checkout.webp"
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <p className=" text-xs leading-[18px] text-primary">
-                              Basic Programming
-                            </p>
-                            <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-2">
-                              This tutorial will help
-                            </p>
-                          </div>
-                          <div className="flex items-end pl-5">
-                            <p className=" font-medium text-xs leading-[18px] text-[#3E4F67] pl-">
-                              $ 100.00
-                            </p>
-                          </div>
-                        </a>
-                      </li>
+                      {cartData.map(
+                        ({ id, img, courseName, price, description }) => (
+                          <li key={id}>
+                            <Link
+                              to="/course-details"
+                              className="flex space-x-4 border-b border-[#EDEDED] py-4"
+                            >
+                              <div>
+                                <img src={img} alt="" />
+                              </div>
+                              <div>
+                                <p className=" text-sm leading-[21px] text-primary">
+                                  {courseName}
+                                </p>
+                                <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
+                                  {description}
+                                </p>
+                              </div>
+                              <div className="flex items-end">
+                                <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
+                                  $ {price}
+                                </p>
+                              </div>
+                            </Link>
+                          </li>
+                        )
+                      )}
                     </ul>
 
                     <div className="flex justify-between py-4">
@@ -747,9 +693,9 @@ const Navbar = () => {
                       </p>
                     </div>
                     <div className="pt-2 w-full text-center  font-medium text-sm leading-5 text-white bg-success py-[9px] rounded-[3px]">
-                      <a href="./pages/checkout.html" className="" type="">
+                      <Link to="#" className="" type="">
                         Check Out
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -806,45 +752,13 @@ const Navbar = () => {
               mainMenu ? "right-0" : "right-full"
             } fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}
           >
-            {/* <div className="flex justify-between px-4 py-4 drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
-              <div>
-                
-                <img
-                  className="w-[32px] h-[32px]"
-                  src={mobileLogo}
-                  alt=""
-                />
-              </div>
-              <div className="flex items-center space-x-4 ">
-                <label for="search" className="relative h-8 w-full">
-                  <button className="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
-                  <MagnifyingGlass size={24} className='text-base p-1' />
-                    
-                  </button>
-
-                  <input
-                    className="text-xs w-full h-full pl-10 pr-7 leading-4 placeholder:text-[#DCDCDC] text-black outline-none bg-transparent rounded-[32px] border-[1px] border-[#D7D9DF]"
-                    type="text"
-                    id="search"
-                    placeholder="Search anything"
-                  />
-                </label>
-                <button
-                 onClick={() => setMainMenu(false)}
-                 type="button" className="close-menu">
-                <X size={24} className='text-disable' />
-                
-                </button>
-              </div>
-            </div> */}
-
             <div class="flex justify-between px-4 py-4 space-x-4 shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
               <div>
                 <img className="w-[32px] h-[32px]" src={mobileLogo} alt="" />
               </div>
               <label for="search" class="relative h-8 w-full">
                 <button class="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
-                  <i class="ph-magnifying-glass text-base py-2 pl-1"></i>
+                  <MagnifyingGlass size={20} className="" />
                 </button>
 
                 <input
@@ -855,8 +769,12 @@ const Navbar = () => {
                 />
               </label>
 
-              <button type="button" class="close-menu">
-                <i class="ph-x text-[32px] text-disable"></i>
+              <button
+                type="button"
+                class="close-menu"
+                onClick={() => setMainMenu(false)}
+              >
+                <X size={24} className="text-disable" />
               </button>
             </div>
 
@@ -877,18 +795,18 @@ const Navbar = () => {
 
               <div className="pt-4">
                 <div className="flex flex-col space-y-2">
-                  <a
-                    href="./pages/mycourse.html"
+                  <Link
+                   to='/my-course'
                     className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                   >
                     My Courses
-                  </a>
-                  <a
-                    href="./pages/my-profile.html"
+                  </Link>
+                  <Link
+                    to="/my-profile"
                     className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                   >
                     My profile
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="border-y-[1px] border-[#F1F1F2] my-2">
@@ -896,6 +814,7 @@ const Navbar = () => {
                     type="button"
                     data-action="main-menu"
                     className="inline-block  font-semibold text-xs leading-5 text-disable py-2.5 px-4"
+                    onClick={() => setExplore(true)}
                   >
                     Explore
                   </button>
@@ -903,59 +822,59 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col space-y-2 border-b-[1px] border-[#F1F1F2] pb-2">
-                <a
-                  href="./pages/payment.html"
+                <Link
+                  to="/payment"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Payment method
-                </a>
-                <a
-                  href="./pages/password-setting.html"
+                </Link>
+                <Link
+                  to="/password-setting"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Password Setting
-                </a>
-                <a
-                  href="./pages/my-notification.html"
+                </Link>
+                <Link
+                  to="/my-notification"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Notification
-                </a>
-                <a
-                  href="./pages/language.html"
+                </Link>
+                <Link
+                  to="/language"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Language
-                </a>
-                <a
-                  href="./pages/order-history.html"
+                </Link>
+                <Link
+                  to="/order-history"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Order History
-                </a>
+                </Link>
               </div>
 
               <div className="flex flex-col space-y-2 border-b-[1px] border-[#F1F1F2] my-2 pb-1">
-                <a
-                  href="./pages/remove-account.html"
+                <Link
+                  to="/remove-account"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Remove Account
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="#"
                   className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                 >
                   Help
-                </a>
+                </Link>
               </div>
 
-              <a
-                href="./index.html"
+              <Link
+                to="/"
                 className=" text-xs leading-5 text-[#637381] py-2.5 px-4 my-2"
               >
                 Log out
-              </a>
+              </Link>
             </div>
           </div>
         ) : (

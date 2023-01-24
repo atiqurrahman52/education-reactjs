@@ -1,5 +1,6 @@
 import React from "react";
 import CourseDetailBanner from "../components/courseDetails/CourseDetailBanner";
+import CourseInfo from "../components/courseDetails/CourseInfo";
 import CourseInformation from "../components/courseDetails/CourseInformation";
 import PriceCardDesktop from "../components/courseDetails/PriceCardDesktop";
 import PriceCardDesktop1 from "../components/courseDetails/PriceCardDesktop1";
@@ -17,9 +18,10 @@ const CourseDetails = () => {
         <PriceCardDesktop />
       </div> */}
       <div className="container">
-        <div class="grid grid-cols-12 gap-4">
+        <div class="flex gap-6 justify-between">
+          <CourseInfo />
           {/* <CourseInformation /> */}
-          {/* <PriceCardDesktop /> */}
+          <PriceCardDesktop />
           {/* <PriceCardDesktop1 /> */}
         </div>
       </div>

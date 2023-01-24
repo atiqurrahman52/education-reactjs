@@ -1,4 +1,6 @@
 import React from 'react';
+// 
+import { ratingsData } from '../../data/rating/ratingData';
 
 const CourseDetailBanner = () => {
     return (
@@ -49,11 +51,14 @@ const CourseDetailBanner = () => {
                 </div>
 
                 <div class="flex items-center gap-2">
-                  <img src="../assets/images/svg/star-fill.svg" alt="" />
-                  <img src="../assets/images/svg/star-fill.svg" alt="" />
-                  <img src="../assets/images/svg/star-fill.svg" alt="" />
-                  <img src="../assets/images/svg/star-fill.svg" alt="" />
-                  <img src="../assets/images/svg/star-outline.svg" alt="" />
+                  {
+                    ratingsData.map(({i,img}) =>
+                    <div key={i}> 
+                      <img src={img} alt='' />
+                    </div>
+                    )
+                  }
+                
                   <p class="font-poppins font-medium text-xs xl:text-sm leading-4 xl:leading-5 text-primary">
                     4.6
                   </p>
