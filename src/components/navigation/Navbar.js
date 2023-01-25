@@ -21,12 +21,15 @@ import { notificationData } from "../../data/notification/notificationData";
 import notification1 from "../../assets/images/notification/image1.webp";
 import notification2 from "../../assets/images/notification/image2.webp";
 import userImg from "../../assets/images/logo/user.png";
+import { scrollToTop } from "../../utils";
 
 const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
   const [search, setSearch] = useState(false);
   const [mainMenu, setMainMenu] = useState(false);
   const [explore, setExplore] = useState(false);
+  const [exploreSubMenu, setExploreSubMenu] = useState(false);
+  const [exploreSubMenuOpen, setExploreSubMenuOpen] = useState(0);
 
   return (
     <header className="sticky w-full top-0 left-0 z-50">
@@ -64,7 +67,7 @@ const Navbar = () => {
                                 key={id}
                                 className="py-2  text-base leading-6 text-primary"
                               >
-                                <a href={path}>{title}</a>
+                                <Link to={path}>{title}</Link>
                               </li>
                             ))}
                           </ul>
@@ -245,7 +248,7 @@ const Navbar = () => {
                             >
                               <div>
                                 <img src={img} alt="" />
-                              </div>  
+                              </div>
                               <div>
                                 <p className=" text-sm leading-[21px] text-primary">
                                   {courseName}
@@ -494,7 +497,7 @@ const Navbar = () => {
 
                     <div className="pt-1">
                       <Link
-                        to='/'
+                        to="/"
                         className=" text-sm leading-5 text-disable py-2.5 px-4 my-2"
                       >
                         Log out
@@ -636,7 +639,9 @@ const Navbar = () => {
         <div className="lg:hidden w-full mobile-top-bar sticky top-0 left-0 bg-white drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)] z-20">
           <div className="flex justify-between px-4 py-4">
             <div>
+              <Link to='/'>
               <img src={mobileLogo} alt="" />
+              </Link>
             </div>
 
             <div className="space-x-4 flex items-center">
@@ -796,7 +801,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <div className="flex flex-col space-y-2">
                   <Link
-                   to='/my-course'
+                    to="/my-course"
                     className=" text-xs leading-5 text-[#637381] py-2.5 px-4"
                   >
                     My Courses
@@ -961,164 +966,75 @@ const Navbar = () => {
         )}
 
         {/*  menu  */}
-        <div className="fixed top-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content main-menu">
-          <div className="pt-2.5 pl-3 flex items-center space-x-2">
-            <CaretLeft size={20} className="text-primary" />
-
-            <button
-              type="button"
-              data-action="profile-menu"
-              className=" text-base leading-6 text-primary"
+        {explore && (
+          <div className="fixed top-0 left-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content main-menu">
+            <div
+              onClick={() => setExplore(false)}
+              className="pt-2.5 pl-3 flex items-center space-x-2"
             >
-              Back
-            </button>
+              <CaretLeft size={20} className="text-primary" />
+
+              <button
+                type="button"
+                className=" text-base leading-6 text-primary"
+              >
+                Back
+              </button>
+            </div>
+
+            <div className="flex flex-col justify-center items-center py-4 px-3">
+              {categoriesData.map(({ id, categoryTitle }) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => {
+                    setExploreSubMenu(true);
+                    setExploreSubMenuOpen(id);
+                  }}
+                  className="py-2.5 px-4  text-xs leading-[18px] text-primary"
+                >
+                  {categoryTitle}
+                </button>
+              ))}
+            </div>
           </div>
-
-          <div className="flex flex-col justify-center items-center py-4 px-3">
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Art & Design
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Business
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Development
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Data Science
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Health
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Health & Fitness
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Lifestyle
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Marketing
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Photography
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Teaching
-            </button>
-            <button
-              type="button"
-              data-action="sub-menu"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Music
-            </button>
-          </div>
-        </div>
-
+        )}
         {/*  sub menu  */}
-        <div className="fixed top-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content sub-menu">
-          <div className="pt-2.5 pl-3 flex items-center space-x-2">
-            <CaretLeft size={20} className="text-primary" />
-            <button
-              type="button"
-              data-action="main-menu"
-              className=" text-base leading-6 text-primary"
+        {exploreSubMenu && (
+          <div className="fixed top-0 left-0 right-full w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content sub-menu">
+            <div
+              onClick={() => setExploreSubMenu(false)}
+              className="pt-2.5 pl-3 flex items-center space-x-2"
             >
-              Back
-            </button>
+              <CaretLeft size={20} className="text-primary" />
+              <button
+                type="button"
+                className=" text-base leading-6 text-primary"
+              >
+                Back
+              </button>
+            </div>
+            <div className="flex flex-col justify-center items-center py-4 px-3">
+              {categoriesData[exploreSubMenuOpen].categories.map(
+                ({ id, title, path }) => (
+                  <Link
+                    key={id}
+                    onClick={() => {
+                      scrollToTop()
+                      setMainMenu(false)
+                      setExplore(false);
+                      setExploreSubMenu(false);
+                    }}
+                    to={path}
+                    className="py-2.5 px-4  text-xs leading-[18px] text-primary"
+                  >
+                    {title}
+                  </Link>
+                )
+              )}
+            </div>
           </div>
-
-          <div className="flex flex-col justify-center items-center py-4 px-3">
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Game Development
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Development
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Data Science
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Mobile Development
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Software Testing
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Software Engineering
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Web Development
-            </a>
-            <a
-              href="./pages/all-courses.html"
-              className="py-2.5 px-4  text-xs leading-[18px] text-primary"
-            >
-              Programming
-            </a>
-          </div>
-        </div>
+        )}
       </section>
     </header>
   );

@@ -17,26 +17,26 @@ const CourseContent = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [accordionActive, setAccordionActive] = useState(0);
   return (
-    <div id="course-content" class="course-tab-content py-8 xl:py-16">
+    <div  className="course-tab-content py-8 xl:py-16">
       <>
       <div>
-        <div class="flex justify-between mb-4">
+        <div className="flex justify-between mb-4">
           <div>
-            <h3 class="font-poppins font-semibold text-sm xl:text-2xl leading-5 xl:leading-9 text-primary">
+            <h3 className="font-poppins font-semibold text-sm xl:text-2xl leading-5 xl:leading-9 text-primary">
               Course content
             </h3>
           </div>
-          <div class="flex space-x-2 xl:space-x-12">
-            <div class="flex items-center space-x-1 xl:space-x-3">
+          <div className="flex space-x-2 xl:space-x-12">
+            <div className="flex items-center space-x-1 xl:space-x-3">
               <Alarm size={18} className="text-success" />
 
-              <p class="font-poppins text-xs xl:text-base leading-4 xl:leading-6 text-primary">
+              <p className="font-poppins text-xs xl:text-base leading-4 xl:leading-6 text-primary">
                 7 weeks
               </p>
             </div>
-            <div class="flex items-center space-x-1 xl:space-x-3">
+            <div className="flex items-center space-x-1 xl:space-x-3">
               <BookOpen size={18} className="text-success" />
-              <p class="font-poppins text-xs xl:text-base leading-4 xl:leading-6 text-primary">
+              <p className="font-poppins text-xs xl:text-base leading-4 xl:leading-6 text-primary">
                 20 Lessons
               </p>
             </div>
@@ -45,8 +45,8 @@ const CourseContent = () => {
 
         {/* <!-- course content accordion started  --> */}
      
-        <div class="accordion-container border-[1px] border-[#EDEDED] rounded-[4px]">
-          <div class="overflow-y-auto scrollbar-main">
+        <div className="accordion-container border-[1px] border-[#EDEDED] rounded-[4px]">
+          <div className="overflow-y-auto scrollbar-main">
             {courseContentData.map(({ id, title, description }) => (
               <div
                 key={id}
@@ -56,7 +56,7 @@ const CourseContent = () => {
                 className=" mb-4"
               >
                 <div className="accordion-head flex justify-between items-center bg-[#F9F9FB] py-[14px] xl:py-[11px] px-4 rounded-md">
-                  <p class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-[26px] text-primary">
+                  <p className="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-[26px] text-primary">
                    {title}
                   </p>
 
@@ -90,10 +90,10 @@ const CourseContent = () => {
                 </div>
 
                 {id === accordionActive && (
-                  <div class="accordion-content ">
-                    <div class="space-y-4 pt-4">
-                      <div class="flex justify-between py-2 px-4">
-                        <div class="flex space-x-2 xl:space-x-4">
+                  <div className="accordion-content ">
+                    <div className="space-y-4 pt-4">
+                      <div className="flex justify-between py-2 px-4">
+                        <div className="flex space-x-2 xl:space-x-4">
                           <input
                             type="checkbox"
                             id="course"
@@ -102,25 +102,25 @@ const CourseContent = () => {
                           />
                           <label
                             for="course"
-                            class="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary"
+                            className="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary"
                           >
                             Course Introduction
                           </label>
                         </div>
-                        <div class="flex space-x-2 xl:space-x-4">
-                          <button class="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
+                        <div className="flex space-x-2 xl:space-x-4">
+                          <button className="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
                           onClick={() => setIsModalVisible(true)}
                           >
                             Preview
                           </button>
-                          <p class="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
+                          <p className="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
                             00:45
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex justify-between py-2 px-4">
-                        <div class="flex space-x-2 xl:space-x-4">
+                      <div className="flex justify-between py-2 px-4">
+                        <div className="flex space-x-2 xl:space-x-4">
                           <svg
                             width="24"
                             height="25"
@@ -138,24 +138,24 @@ const CourseContent = () => {
                             />
                           </svg>
 
-                          <p class="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
+                          <p className="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
                             What is Angular
                           </p>
                         </div>
-                        <div class="flex space-x-2 xl:space-x-4">
-                          <button class="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
+                        <div className="flex space-x-2 xl:space-x-4">
+                          <button className="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
                            onClick={() => setIsModalVisible(true)}
                           >
                             Preview
                           </button>
-                          <p class="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
+                          <p className="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
                             00:45
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex justify-between py-2 px-4">
-                        <div class="flex space-x-2 xl:space-x-4">
+                      <div className="flex justify-between py-2 px-4">
+                        <div className="flex space-x-2 xl:space-x-4">
                           <svg
                             width="20"
                             height="21"
@@ -172,26 +172,26 @@ const CourseContent = () => {
                               fill="#1890FF"
                             />
                           </svg>
-                          <p class="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
+                          <p className="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
                             Angular file introduction
                           </p>
                         </div>
-                        <div class="flex space-x-2 xl:space-x-4">
-                          <button class="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
+                        <div className="flex space-x-2 xl:space-x-4">
+                          <button className="preview-btn font-poppins font-medium text-xs xl:text-sm text-success leading-[18px] xl:leading-[21px]"
                            onClick={() => setIsModalVisible(true)}
                           >
                             Preview
                           </button>
-                          <p class="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
+                          <p className="font-poppins font-normal text-xs xl:text-sm text-primary opacity-[0.6] leading-[18px] xl:leading-[21px]">
                             00:45
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex justify-between py-2 px-4">
-                        <div class="flex space-x-2 xl:space-x-4">
+                      <div className="flex justify-between py-2 px-4">
+                        <div className="flex space-x-2 xl:space-x-4">
                           <FileText size={20} className="text-[#51525B]" />
-                          <p class="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
+                          <p className="font-poppins font-medium text-xs xl:text-base leading-[18px] xl:leading-6 text-primary">
                             Course Introduction.txt
                           </p>
                         </div>

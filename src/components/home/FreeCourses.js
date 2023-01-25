@@ -21,7 +21,7 @@ const FreeCourses = () => {
             return (
               <div key={id}>
                 <Link
-                  to="#"
+                 to="/course-details"
                   className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
                 >
                   <div className="mb-4">
@@ -64,12 +64,12 @@ const FreeCourses = () => {
           })}
             </div>
             <div class="flex justify-center items-center pt-6 xl:pt-8">
-              <a
-                href="./pages/all-courses.html"
+              <Link
+               to="/course-details"
                 class="font-poppins text-sm xl:text-base leading-5 xl:leading-6 text-primary capitalize py-2.5 px-5 rounded-md border border-primary"
               >
                 View All Courses
-              </a>
+              </Link>
             </div>
           </div>
         </div>

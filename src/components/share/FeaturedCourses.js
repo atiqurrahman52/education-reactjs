@@ -56,7 +56,7 @@ const FeaturedCourses = () => {
                     class="swiper-slide flex flex-col xl:flex-row items-center"
                   >
                     <Link
-                      to="#"
+                      to="/course-details"
                       class="block space-y-4 xl:w-1/2"
                     >
                       <h3

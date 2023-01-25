@@ -25,12 +25,16 @@ import Language from "./components/userDashboard/Language";
 import PasswordSetting from "./components/userDashboard/PasswordSetting";
 import MyNotification from "./components/userDashboard/MyNotification";
 import RemoveAccount from "./components/userDashboard/RemoveAccount";
+import Test from "./pages/Test";
+import Test2 from "./pages/Test2";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<BasicLayout />}>
         <Route index element={<Home />} />
+        <Route path="/test" element={<Test />} />
+        {/* <Route path="/test2" element={<Test2 />} /> */}
         <Route path="/instructor" element={<Instructor />} />
         <Route path="/all-courses" element={<AllCourses />} />
         <Route path="/my-course" element={<MyCourses />} />

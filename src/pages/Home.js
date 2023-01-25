@@ -3,6 +3,7 @@ import ExploreCoursers from "../components/home/ExploreCoursers";
 import FreeCourses from "../components/home/FreeCourses";
 import HeroSection from "../components/home/HeroSection";
 import HighestSellingCourses from "../components/home/HighestSellingCourses";
+import PopularCourse from "../components/home/PopularCourse";
 import ShortCourses from "../components/home/ShortCourses";
 import Skills from "../components/home/Skills";
 import BecomeInstructor from "../components/share/BecomeInstructor";
@@ -15,6 +16,7 @@ const Home = () => {
       <HeroSection />
       <Skills />
       <ExploreCoursers />
+      {/* <PopularCourse /> */}
       <FeaturedCourses />
       <SubjectAreas />
       <HighestSellingCourses />

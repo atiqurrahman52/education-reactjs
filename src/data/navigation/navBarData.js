@@ -51,7 +51,7 @@ const categoriesData = [
     categories: [
       {
         id: 0,
-        title: "Game Development",
+        title: "Programming",
         path: "/all-courses",
       },
       {
@@ -86,7 +86,7 @@ const categoriesData = [
       },
       {
         id: 7,
-        title: "Programming",
+        title: "Game Development",
         path: "/all-courses",
       },
     ],
@@ -97,7 +97,7 @@ const categoriesData = [
     categories: [
       {
         id: 0,
-        title: "Game Development",
+        title: "Mobile Development",
         path: "/all-courses",
       },
       {
@@ -112,7 +112,7 @@ const categoriesData = [
       },
       {
         id: 3,
-        title: "Mobile Development",
+        title: "Game Development",
         path: "/all-courses",
       },
       {
@@ -143,7 +143,7 @@ const categoriesData = [
     categories: [
       {
         id: 0,
-        title: "Game Development",
+        title: "Software Testing",
         path: "/all-courses",
       },
       {
@@ -163,7 +163,7 @@ const categoriesData = [
       },
       {
         id: 4,
-        title: "Software Testing",
+        title: "Game Development",
         path: "/all-courses",
       },
       {
@@ -189,7 +189,7 @@ const categoriesData = [
     categories: [
       {
         id: 0,
-        title: "Game Development",
+        title: "Data Science",
         path: "/all-courses",
       },
       {
@@ -199,7 +199,7 @@ const categoriesData = [
       },
       {
         id: 2,
-        title: "Data Science",
+        title: "Game Development",
         path: "/all-courses",
       },
       {
@@ -281,7 +281,7 @@ const categoriesData = [
     categories: [
       {
         id: 0,
-        title: "Game Development",
+        title: "Web Development",
         path: "/all-courses",
       },
       {
@@ -311,7 +311,7 @@ const categoriesData = [
       },
       {
         id: 6,
-        title: "Web Development",
+        title: "Game Development",
         path: "/all-courses",
       },
       {

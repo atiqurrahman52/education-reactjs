@@ -7,7 +7,7 @@ const Courses = () => {
       <div className="grid grid-cols-3">
         {coursesData.map(({ id, title,ratings }) => {
           return (
-            <div>
+            <div key={id}>
               <p>{title}</p>
               <ReactStars
                 size={14}
