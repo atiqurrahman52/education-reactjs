@@ -19,7 +19,6 @@ import Sitemap from "./pages/Sitemap";
 import Checkout from "./components/checkout/Checkout";
 import Profile from "./components/userDashboard/Profile";
 import OrderHistory from "./components/userDashboard/OrderHistory";
-import Payment from "./components/userDashboard/Payment";
 import Certificate from "./components/userDashboard/Certificate";
 import Language from "./components/userDashboard/Language";
 import PasswordSetting from "./components/userDashboard/PasswordSetting";
@@ -27,6 +26,7 @@ import MyNotification from "./components/userDashboard/MyNotification";
 import RemoveAccount from "./components/userDashboard/RemoveAccount";
 import Test from "./pages/Test";
 import Test2 from "./pages/Test2";
+import Payment from "./components/userDashboard/payment/Payment";
 
 function App() {
   return (
@@ -53,7 +53,9 @@ function App() {
         <Route path="/certificate" element={<Certificate/>} />
         <Route path="/language" element={<Language />} />
         <Route path="/password-setting" element={<PasswordSetting />} />
-        <Route path="/payment" element={<Payment />} />
+        {/* <Route path="/payment" element={<Payment />} /> */}
+        <Route path="/payment" element={<Payment/>} />
+
         <Route path="/my-notification" element={<MyNotification />} />
         <Route path="/remove-account" element={<RemoveAccount />} />
         <Route path="*" element={<NotFound />} />
