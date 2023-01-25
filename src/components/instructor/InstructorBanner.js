@@ -1,3 +1,4 @@
+import { CaretRight } from 'phosphor-react';
 import React from 'react';
 import instructor from '../../assets/images/instructor/breadcrumb2.webp';
 
@@ -12,7 +13,8 @@ const InstructorBanner = () => {
               >
                 Explore
               </p>
-              <i class="ph-caret-right text-primary"></i>
+             
+              <CaretRight size={18} className='text-primary' />
               <p
                 class="text-[#9DA6BA] font-poppins text-xs xl:text-sm leading-4 xl:leading-5"
               >
