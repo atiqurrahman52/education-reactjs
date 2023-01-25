@@ -22,7 +22,7 @@ const FreeCourses = () => {
               <div key={id}>
                 <Link
                  to="/course-details"
-                  className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
+                  className="rounded-xl overflow-hidden shadow-[0px_0px_2px_rgba(145,158,171,0.2),0px_12px_24px_rgba(145,158,171,0.2)] block"
                 >
                   <div className="mb-4">
                     <img

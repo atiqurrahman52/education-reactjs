@@ -8,10 +8,13 @@ const PriceCardDesktop = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
-      <div className="lg:block hidden max-w-[416px] flex-shrink-0 h-fit -mt-[26%] mb-2 price-card rounded-lg p-6 sticky z-30 top-[72px] bg-white">
+      <div className="lg:block hidden max-w-[416px] flex-shrink-0 h-fit -mt-[26%] mb-2 price-card rounded-lg border border-[#DDE0E3] p-6 sticky z-30 top-[72px] bg-white shadow-[0px_0px_2px_rgba(145,158,171,0.2), 0px_12px_24px_rgba(145,158,171,0.2)]">
         <div className="relative preview-btn cursor-pointer">
           <img className="rounded-md" src={courseVideo} alt="" />
-          <div className="absolute inset-0 flex items-center justify-center" onClick={() => setIsModalVisible(true)}>
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            onClick={() => setIsModalVisible(true)}
+          >
             <PlayCircle size={36} className="text-white" />
 
             <p className="absolute left-1/2 -translate-x-1/2 bottom-3 text-white font-poppins font-semibold text-sm xl:text-base">

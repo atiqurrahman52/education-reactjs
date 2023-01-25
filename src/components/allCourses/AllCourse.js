@@ -36,9 +36,9 @@ const AllCourse = () => {
           >
             <span
               onClick={() => setShowDropdown(true)}
-              className="flex justify-between  text-xs md:text-sm text-primary border border-[#9DA6BA] p-3 rounded-md w-[276px]"
+              className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] p-3 rounded-md"
             >
-              <span className="text-[#9DA6BA] text-lg leading-6"> Sort by</span>
+              <span className="text-[#9DA6BA] text-xs md:text-lg leading-6"> Sort by</span>
               {selectDropdown}
               <CaretDown
                 size={18}
@@ -311,7 +311,7 @@ const AllCourse = () => {
               return (
                 <div key={id}>
                   <Link
-                    to="#"
+                     to="/course-details"
                     className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
                   >
                     <div className="mb-4">

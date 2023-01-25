@@ -1,3 +1,4 @@
+import { CaretRight } from 'phosphor-react';
 import React from 'react';
 // 
 import { ratingsData } from '../../data/rating/ratingData';
@@ -12,7 +13,8 @@ const CourseDetailBanner = () => {
               <p class="text-primary font-normal font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
                 Web Development
               </p>
-              <i class="ph-caret-right text-primary"></i>
+              
+              <CaretRight size={18} className='text-primary' />
               <p class="text-[#9DA6BA] font-poppins font-medium text-xs xl:text-sm leading-4 xl:leading-5">
                 JavaScript
               </p>
