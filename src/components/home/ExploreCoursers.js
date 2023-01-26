@@ -1,9 +1,10 @@
-import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 import { coursesData } from "../../data/home/coursesData";
+import CardHover from "../share/CardHover";
 
 const ExploreCoursers = () => {
+  
   return (
     <div className="container">
       <div className="py-6 xl:py-16 gap-6 xl:gap-8">
@@ -13,7 +14,7 @@ const ExploreCoursers = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 pt-6 xl:pt-8">
           {coursesData.map(({ id, img, author, price, title, ratings }) => {
             return (
-              <div key={id}>
+              <div key={id} className="relative">
                 <Link
                   to="/course-details"
                   className="rounded-xl overflow-hidden shadow-[0px_0px_2px_rgba(145,158,171,0.2),0px_12px_24px_rgba(145,158,171,0.2)] block"
@@ -53,6 +54,7 @@ const ExploreCoursers = () => {
                     </p>
                   </div>
                 </Link>
+                {/* <CardHover /> */}
               </div>
             );
           })}

@@ -29,7 +29,7 @@ const MyCourseContent = () => {
                 className={`  
                ${
                  isActive === tab.id
-                   ? "text-primary border-b border-success"
+                   ? "text-primary font-semibold text-base border-b border-success"
                    : "text-[#9DA6BA] text-base"
                }  cursor-pointer`}
                 onClick={() => handleTabClick(tab.id)}
