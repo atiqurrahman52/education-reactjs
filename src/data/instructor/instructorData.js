@@ -1,6 +1,5 @@
 import instructorImg from "../../assets/images/instructor/become-instructor.webp";
-import one from '../../assets/images/about/mission.webp'
-import two from '../../assets/images/about/story.webp'
+
 const instructorData = [
   {
     id: 0,
@@ -24,7 +23,7 @@ const instructorData = [
   {
     id: 1,
     tab: "Instructor Rules",
-    img: one,
+    img: instructorImg,
     content: [
       {
         id: 0,
@@ -43,7 +42,7 @@ const instructorData = [
   {
     id: 2,
     tab: "Start with Courses",
-    img: two,
+    img: instructorImg,
     content: [
       {
         id: 0,
