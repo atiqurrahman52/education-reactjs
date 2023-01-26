@@ -44,7 +44,7 @@ const Payment = () => {
         </div>
       </div>
 
-      {/* <!-- modal --> */}
+ 
     
      {
       showModal && <PaymentModal setShowModal={setShowModal}/>

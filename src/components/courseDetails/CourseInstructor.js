@@ -18,8 +18,8 @@ const CourseInstructor = () => {
                 className="text-[#CDCDCD] bg-[#EEEEEE] rounded-full p-7"
               />
             </div>
-            {/* <div className="flex items-center justify-center space-x-2 xl:space-x-3 pt-6">
-              {instructorSocialData.map((i, path, img) => (
+            <div className="flex items-center justify-center space-x-2 xl:space-x-3 pt-6">
+              {/* {instructorSocialData.map((i, path, img) => (
                 <Link key={i} to={path}>
                   <img
                     className="bg-[#F3F3F3] rounded-[4px] py-[5px] px-2"
@@ -27,8 +27,8 @@ const CourseInstructor = () => {
                     alt=""
                   />
                 </Link>
-              ))}
-            </div> */}
+              ))} */}
+            </div>
           </div>
 
           <div className="w-full xl:w-[216px] flex flex-shrink-0 flex-col justify-center xl:items-start items-center p-1 xl:p-3">

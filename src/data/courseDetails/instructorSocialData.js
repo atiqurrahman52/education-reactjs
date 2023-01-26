@@ -4,6 +4,7 @@ import youtube from "../../assets/images/svg/youtube.svg";
 import linkedin from "../../assets/images/svg/Linkedin.svg";
 
 
+
 const instructorSocialData =[
     {
         id:0,

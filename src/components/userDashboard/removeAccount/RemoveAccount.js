@@ -1,6 +1,9 @@
-import UserDashboardLayout from "../../layout/UserDashboardLayout";
+import { useState } from "react";
+import UserDashboardLayout from "../../../layout/UserDashboardLayout";
+import RemoveAccountModal from "./RemoveAccountModal";
 
 const RemoveAccount = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <UserDashboardLayout>
       <div
@@ -22,11 +25,18 @@ const RemoveAccount = () => {
           <button
             type=""
             class="remove-account py-2 px-4 bg-success text-white rounded-md font-poppins font-medium text-sm leading-[21px]"
+            onClick={() => setShowModal(true)} 
           >
             Remove Account
           </button>
         </div>
       </div>
+
+      {
+      showModal && <RemoveAccountModal setShowModal={setShowModal}/>
+     }
+   
+
     </UserDashboardLayout>
   );
 };

@@ -23,10 +23,11 @@ import Certificate from "./components/userDashboard/Certificate";
 import Language from "./components/userDashboard/Language";
 import PasswordSetting from "./components/userDashboard/PasswordSetting";
 import MyNotification from "./components/userDashboard/MyNotification";
-import RemoveAccount from "./components/userDashboard/RemoveAccount";
+// import RemoveAccount from "./components/userDashboard/RemoveAccount";
 import Test from "./pages/Test";
 import Test2 from "./pages/Test2";
 import Payment from "./components/userDashboard/payment/Payment";
+import RemoveAccount from "./components/userDashboard/removeAccount/RemoveAccount";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/payment" element={<Payment/>} />
 
         <Route path="/my-notification" element={<MyNotification />} />
+        {/* <Route path="/remove-account" element={<RemoveAccount />} /> */}
         <Route path="/remove-account" element={<RemoveAccount />} />
         <Route path="*" element={<NotFound />} />
       </Route>

@@ -1,6 +1,8 @@
 import React from 'react';
 import UserDashboardLayout from '../../layout/UserDashboardLayout';
 import UserDashboardMenu from './UserDashboardMenu';
+import iconEye from '../../assets/images/svg/Icon-eye.svg';
+import info from '../../assets/images/svg/info.svg';
 
 const PasswordSetting = () => {
     return (
@@ -14,7 +16,7 @@ const PasswordSetting = () => {
                     />
                     <img
                       className="absolute right-3 top-1/2 -translate-y-1/2"
-                      src="../assets/images/svg/Icon-eye.svg"
+                      src={iconEye}
                       alt=""
                     />
                   </div>
@@ -26,21 +28,21 @@ const PasswordSetting = () => {
                     />
                     <img
                       className="absolute right-3 top-1/2 -translate-y-1/2"
-                      src="../assets/images/svg/Icon-eye.svg"
+                      src={iconEye}
                       alt=""
                     />
                   </div>
                   <div className="space-y-2 pt-2 mb-6">
                     <div className="flex space-x-[5px]">
-                      <img src="../assets/images/svg/info.svg" alt=""/>
+                      <img src={info} alt=""/>
                       <p className="font-poppins text-sm leading-[21px] text-disable">Password length must be greater than 8 characters.</p>
                     </div>
                     <div className="flex space-x-[5px]">
-                      <img src="../assets/images/svg/info.svg" alt=""/>
+                      <img src={info} alt=""/>
                       <p className="font-poppins text-sm leading-[21px] text-disable">Password must contain a special character (@, $, !, &, etc).</p>
                     </div>
                     <div className="flex space-x-[5px]">
-                      <img src="../assets/images/svg/info.svg" alt=""/>
+                      <img src={info} alt=""/>
                       <p className="font-poppins text-sm leading-[21px] text-disable">Atleast one word should be capital.</p>
                     </div>
                     
@@ -54,7 +56,7 @@ const PasswordSetting = () => {
                     />
                     <img
                       className="absolute right-3 top-1/2 -translate-y-1/2"
-                      src="../assets/images/svg/Icon-eye.svg"
+                      src={iconEye}
                       alt=""
                     />
                   </div>

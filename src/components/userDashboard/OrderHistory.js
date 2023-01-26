@@ -8,7 +8,7 @@ const OrderHistory = () => {
   const [action, setAction] = useState(false);
 
   const TableRow = ({ data }) => {
-    const { id, img, courseName, enrollDate, price, orderId, status } = data;
+    const { id, img, courseName, enrollDate, price, orderId, status} = data;
     const [toggle, setToggle] = useState(false);
 
     const handleClick = () => {

@@ -1,4 +1,5 @@
 
+
 const PaymentModal = ({setShowModal}) => {
   return (
     <div class="modal fixed z-50 inset-0 h-screen w-full flex items-center justify-center">

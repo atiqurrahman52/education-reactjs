@@ -1,7 +1,61 @@
+import { DotsThreeVertical } from "phosphor-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { certificateData } from "../../data/userDashboard/certificateData";
 import UserDashboardLayout from "../../layout/UserDashboardLayout";
+import sql from "../../assets/images/profile/my-sql.webp";
+import python from "../../assets/images/profile/python.webp";
 
 const Certificate = () => {
+
+  const TableRow = ({ data }) => {
+    const { id, img, product, enrollDate, remarks, completeDate} = data;
+    const [toggle, setToggle] = useState(false);
+
+    const handleClick = () => {
+      setToggle(!toggle);
+    };
+
+    return (
+      <tr>
+        <td className="px-4 py-4">
+          <div className="flex items-center">
+            <div className="flex-shrink-0 w-10 h-10">
+              <img className="rounded-md" src={img} alt="" />
+            </div>
+
+            <div className="ml-4">
+              <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
+                {product}
+              </p>
+            </div>
+          </div>
+        </td>
+        <td className="px-4 py-4">
+          <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
+            {enrollDate}
+          </p>
+        </td>
+        <td className="px-4 py-4">
+          <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
+            {completeDate}
+          </p>
+        </td>
+        <td className="px-4 py-4">
+          <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
+            {remarks}
+          </p>
+        </td>
+       
+      </tr>
+    );
+  };
+
+
+
+
   return (
+
     <UserDashboardLayout>
       <div className="max-w-[1076px]  shadow-[0px_0px_31px_rgba(175,175,175,0.16)] rounded-2xl px-6 py-4">
         <div className="mb-6">
@@ -47,7 +101,7 @@ const Certificate = () => {
                     <div className="flex-shrink-0 w-10 h-10">
                       <img
                         className="rounded-md"
-                        src="../assets/images/profile/forex.webp"
+                        src={python}
                         alt=""
                       />
                     </div>
@@ -107,14 +161,18 @@ const Certificate = () => {
                   </div>
                 </td>
               </tr>
-
+              {/* <tbody> */}
+              {/* {certificateData.map((item, i) => (
+                <TableRow key={i} data={item} />
+              ))} */}
+            {/* </tbody> */}
               <tr>
                 <td className="px-4 py-4">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 w-10 h-10">
                       <img
                         className="rounded-md"
-                        src="../assets/images/profile/sql.webp"
+                        src={sql}
                         alt=""
                       />
                     </div>
@@ -180,7 +238,7 @@ const Certificate = () => {
                     <div className="flex-shrink-0 w-10 h-10">
                       <img
                         className="rounded-md"
-                        src="../assets/images/profile/my-sql.webp"
+                        src={python}
                         alt=""
                       />
                     </div>
@@ -239,13 +297,17 @@ const Certificate = () => {
                     </div>
                   </div>
                 </td>
-              </tr>
+              </tr> 
+
             </tbody>
           </table>
         </div>
       </div>
     </UserDashboardLayout>
   );
+
+
+
 };
 
 export default Certificate;
