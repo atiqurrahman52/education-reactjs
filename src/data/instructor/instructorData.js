@@ -1,4 +1,6 @@
 import instructorImg from "../../assets/images/instructor/become-instructor.webp";
+import one from '../../assets/images/about/mission.webp'
+import two from '../../assets/images/about/story.webp'
 const instructorData = [
   {
     id: 0,
@@ -16,13 +18,13 @@ const instructorData = [
         title: "How we help you",
         description:
           "a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egeeque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval",
-      },
-    ],
+      }
+    ]
   },
   {
     id: 1,
     tab: "Instructor Rules",
-    img: instructorImg,
+    img: one,
     content: [
       {
         id: 0,
@@ -35,28 +37,28 @@ const instructorData = [
         title: "How we help you",
         description:
           "a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egeeque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval",
-      },
-    ],
+      }
+    ]
   },
   {
     id: 2,
     tab: "Start with Courses",
-    img: instructorImg,
+    img: two,
     content: [
       {
         id: 0,
-        title: "Plan your course",
+        title: "Start with Courses",
         description:
           "cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval",
       },
       {
         id: 1,
-        title: "How we help you",
+        title: "Start with Courses",
         description:
           "a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egeeque convallis a cras semper auctor. Libero id faucibus nisl tincidunt egetnvallis a cras semper auctonvallis a cras semper aucto. Neque convallis a cras semper auctor. Liberoe convallis a cras semper atincidunt egetnval",
-      },
-    ],
-  },
+      }
+    ]
+  }
 ];
 
 export { instructorData };
