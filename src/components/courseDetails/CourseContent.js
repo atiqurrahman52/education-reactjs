@@ -18,7 +18,7 @@ const CourseContent = () => {
   const [accordionActive, setAccordionActive] = useState(0);
   return (
     <div  className="course-tab-content py-8 xl:py-16">
-      <>
+      {/* <> */}
       <div>
         <div className="flex justify-between mb-4">
           <div>
@@ -43,17 +43,19 @@ const CourseContent = () => {
           </div>
         </div>
 
-        {/* <!-- course content accordion started  --> */}
+        {/* <!-- course content accordion started  --> */}   
      
         <div className="accordion-container border-[1px] border-[#EDEDED] rounded-[4px]">
+
           <div className="overflow-y-auto scrollbar-main">
-            {courseContentData.map(({ id, title, description }) => (
+            {courseContentData.map(({ id, title}) => (
+              <>
               <div
                 key={id}
                 onClick={() =>
                   setAccordionActive(id === accordionActive ? "" : id)
                 }
-                className=" mb-4"
+                className="mb-4"
               >
                 <div className="accordion-head flex justify-between items-center bg-[#F9F9FB] py-[14px] xl:py-[11px] px-4 rounded-md">
                   <p className="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-[26px] text-primary">
@@ -88,7 +90,9 @@ const CourseContent = () => {
                     </svg>
                   )}
                 </div>
-
+                </div>
+                
+                <div>
                 {id === accordionActive && (
                   <div className="accordion-content ">
                     <div className="space-y-4 pt-4">
@@ -202,16 +206,16 @@ const CourseContent = () => {
                     </div>
                   </div>
                 )}
+                
               </div>
+              </>
             ))}
-
-          
           </div>
         </div>
        
       </div>
       {isModalVisible && <Modal setIsModalVisible={setIsModalVisible} />}
-      </>
+      {/* </> */}
      
       
     </div>
