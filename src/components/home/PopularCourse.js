@@ -1,4 +1,4 @@
-import { Briefcase } from "phosphor-react";
+import { Briefcase, CaretLeft, CaretRight } from "phosphor-react";
 import { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
@@ -34,9 +34,17 @@ const PopularCourse = () => {
         speed={1500}
         loopFillGroupWithBlank={true}
         // navigation={true}
-        pagination={true}
+        // pagination={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper mt-6 xl:mt-14"
+        className="mySwiper courseSlider"
+        // className="courseSlider !px-2 !py-10"
+        pagination={{
+          dynamicBullets: true,
+        }}
+        navigation={{
+          prevEl: ".coursePrev-btn",
+          nextEl: ".courseNext-btn",
+        }}
       >
         {children}
       </Swiper>
@@ -45,19 +53,17 @@ const PopularCourse = () => {
 
   return (
     <div>
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto relative">
         <SwiperLayout>
           {popularCoursesData.map((item, i) => {
             return (
               <SwiperSlide
                 onClick={() => setTabData(popularCoursesData[i].items)}
                 key={i}
-                className="flex justify-center mb-10 cursor-pointer"
+                className=""
               >
-                <div className="block">
+                <div className="flex justify-center cursor-pointer">
                   <button className="flex items-center justify-center gap-4 p-4 rounded-[10px] border border-black/10 w-full font-poppins text-xs xl:text-base text-disable">
-                    {/* <Briefcase size={45} className="text-disable" /> */}
-
                     {item.name}
                   </button>
                 </div>
@@ -65,16 +71,24 @@ const PopularCourse = () => {
             );
           })}
         </SwiperLayout>
+
+        <button className="md:block xs:hidden coursePrev-btn z-50 absolute top-1/2 -left-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
+          <CaretLeft size={18} weight="bold" className="text-success" />
+        </button>
+        <button className="md:block xs:hidden courseNext-btn z-50 absolute top-1/2 -right-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
+          <CaretRight size={18} weight="bold" className="text-success" />
+        </button>
+
       </div>
 
-      <div className="container">
+      <div className="container border py-5">
         <SwiperLayout>
           {tabData.map((item, i) => {
             return (
               <SwiperSlide key={i}>
                 <Link
                   to="/course-details"
-                  className="rounded-xl overflow-hidden  block shadow-[0_0_14px_rgba(175,175,175,0.16)]"
+                  className="rounded-xl overflow-hidden  block shadow-[0px_0px_2px_rgba(145,158,171,0.2),0px_12px_24px_rgba(145,158,171,0.2)]"
                 >
                   <div className="mb-4">
                     <img
