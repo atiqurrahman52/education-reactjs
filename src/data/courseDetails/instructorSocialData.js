@@ -8,22 +8,22 @@ import linkedin from "../../assets/images/svg/Linkedin.svg";
 const instructorSocialData =[
     {
         id:0,
-        img:facebook,
+        icon:facebook,
         path:'https://www.facebook.com/'
     },
     {
         id:1,
-        img:twitter,
+        icon:twitter,
         path:'https://twitter.com/'
     },
     {
         id:2,
-        img:youtube,
+        icon:youtube,
         path:'https://www.youtube.com/'
     },
     {
         id:3,
-        img:linkedin,
+        icon:linkedin,
         path:'https://www.linkedin.com/'
     },
 ]

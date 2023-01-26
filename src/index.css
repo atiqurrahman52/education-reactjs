@@ -244,3 +244,13 @@
     0px 12px 24px rgba(145, 158, 171, 0.2);
 }
 /* Mix end  */
+.courseSlider .swiper-pagination-bullet{
+  bottom: -10% !important;
+
+  background-color: red;
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: #0e2341;
+}
+

@@ -34,6 +34,7 @@ const CoursesVideo = () => {
         <div className="accordion-container border-[1px] border-[#EDEDED] rounded-[4px]">
           <div className="overflow-y-auto scrollbar-main">
             {courseContentData.map(({ id, title, description }) => (
+             <>
               <div
                 key={id}
                 onClick={() =>
@@ -74,7 +75,8 @@ const CoursesVideo = () => {
                     </svg>
                   )}
                 </div>
-
+                </div>
+                <div>
                 {id === accordionActive && (
                   <div className="accordion-content ">
                     <div className="space-y-4 pt-4">
@@ -192,6 +194,7 @@ const CoursesVideo = () => {
                   </div>
                 )}
               </div>
+             </>
             ))}
           </div>
         </div>

@@ -19,15 +19,15 @@ const CourseInstructor = () => {
               />
             </div>
             <div className="flex items-center justify-center space-x-2 xl:space-x-3 pt-6">
-              {/* {instructorSocialData.map((i, path, img) => (
-                <Link key={i} to={path}>
-                  <img
-                    className="bg-[#F3F3F3] rounded-[4px] py-[5px] px-2"
-                    src={img}
-                    alt=""
-                  />
+              {instructorSocialData.map(({ i, path, icon }) => (
+                <Link
+                  key={i}
+                  to={path}
+                  className="bg-[#F3F3F3] rounded-[4px] h-[30px] w-9 flex items-center justify-center"
+                >
+                  <img src={icon} alt="" />
                 </Link>
-              ))} */}
+              ))}
             </div>
           </div>
 
