@@ -38,7 +38,10 @@ const AllCourse = () => {
               onClick={() => setShowDropdown(true)}
               className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] p-3 rounded-md"
             >
-              <span className="text-[#9DA6BA] text-xs md:text-lg leading-6"> Sort by</span>
+              <span className="text-[#9DA6BA] text-xs md:text-lg leading-6">
+                {" "}
+                Sort by
+              </span>
               {selectDropdown}
               <CaretDown
                 size={18}
@@ -98,42 +101,30 @@ const AllCourse = () => {
                   Sort by
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-                  <div>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
                       Latest
-                    </label>
-                  </div>
-                  <div>
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
                       Oldest
-                    </label>
-                  </div>
-                  <div>
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
                       Course Title (A-Z)
-                    </label>
-                  </div>
-                  <div>
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Course Title (Z-A)
-                    </label>
-                  </div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                      Course Title (A-Z)
+                    </p>
+                  </label>
                 </div>
               </div>
 
@@ -142,42 +133,32 @@ const AllCourse = () => {
                   Category
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-                  <div>
+
+                <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Art & Design (4)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Art & Design (4)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Architecture (51)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Architecture (51)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      UX/UI Design (3)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    UX/UI Design (3)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Marketing (24)
-                    </label>
-                  </div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Marketing (24)
+                    </p>
+                  </label>
+
                 </div>
               </div>
 
@@ -186,42 +167,32 @@ const AllCourse = () => {
                   Instructor
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-                  <div>
+
+                <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Adam Smith (20)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Adam Smith (20)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Beyjones dogges(20)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Beyjones dogges(20)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Kilian Roxy(15)
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Kilian Roxy(15)
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Alex Roben(25)
-                    </label>
-                  </div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Alex Roben(25)
+                    </p>
+                  </label>
+
                 </div>
               </div>
 
@@ -230,42 +201,32 @@ const AllCourse = () => {
                   Level
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-                  <div>
+
+                <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      All Levels
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    All Levels
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Beginner
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Beginner
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Expert
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Intermediate
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Intermediate
-                    </label>
-                  </div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Expert
+                    </p>
+                  </label>
+
                 </div>
               </div>
 
@@ -274,33 +235,27 @@ const AllCourse = () => {
                   Price
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-                  <div>
+
+                <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      All
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    All
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Free
-                    </label>
-                  </div>
-                  <div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Free
+                    </p>
+                  </label>
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
-                    <label
-                      for=""
-                      className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5"
-                    >
-                      Paid
-                    </label>
-                  </div>
+                    <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
+                    Paid
+                    </p>
+                  </label>
+                 
+
                 </div>
               </div>
             </div>
@@ -311,7 +266,7 @@ const AllCourse = () => {
               return (
                 <div key={id}>
                   <Link
-                     to="/course-details"
+                    to="/course-details"
                     className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
                   >
                     <div className="mb-4">
