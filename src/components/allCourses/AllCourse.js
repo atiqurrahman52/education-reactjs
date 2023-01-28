@@ -133,32 +133,30 @@ const AllCourse = () => {
                   Category
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-
-                <label className="flex">
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Art & Design (4)
+                      Art & Design (4)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Architecture (51)
+                      Architecture (51)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    UX/UI Design (3)
+                      UX/UI Design (3)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Marketing (24)
+                      Marketing (24)
                     </p>
                   </label>
-
                 </div>
               </div>
 
@@ -167,32 +165,30 @@ const AllCourse = () => {
                   Instructor
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-
-                <label className="flex">
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Adam Smith (20)
+                      Adam Smith (20)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Beyjones dogges(20)
+                      Beyjones dogges(20)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Kilian Roxy(15)
+                      Kilian Roxy(15)
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Alex Roben(25)
+                      Alex Roben(25)
                     </p>
                   </label>
-
                 </div>
               </div>
 
@@ -201,32 +197,30 @@ const AllCourse = () => {
                   Level
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-
-                <label className="flex">
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    All Levels
+                      All Levels
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Beginner
+                      Beginner
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Intermediate
+                      Intermediate
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Expert
+                      Expert
                     </p>
                   </label>
-
                 </div>
               </div>
 
@@ -235,27 +229,24 @@ const AllCourse = () => {
                   Price
                 </p>
                 <div className="space-y-2 xl:space-y-4">
-
-                <label className="flex">
+                  <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    All
+                      All
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Free
+                      Free
                     </p>
                   </label>
                   <label className="flex">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <p className="ml-3 xl:ml-4 text-disable font-poppins font-medium text-xs xl:text-base leading-4 xl:leading-5">
-                    Paid
+                      Paid
                     </p>
                   </label>
-                 
-
                 </div>
               </div>
             </div>
