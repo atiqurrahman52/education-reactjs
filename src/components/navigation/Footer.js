@@ -8,180 +8,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      {/* <div className="py-8 xl:py-10 bg-[#071A35]">
-        <div className="container">
-          <div className="grid grid-cols-1 lsm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-x-6">
-            <div>
-              <img
-                className="h-[92px] w-[168px] mb-6 xl:mb-8"
-                src={logo}
-                alt="footer-logo"
-              />
-              <p className=" font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
-                Let’s stay in touch
-              </p>
-              <div className="flex space-x-3 mb-6 xl:mb-8">
-                {socialIconSvg.map((item, i) => {
-                  return (
-                    <a key={i} to={item.path} target="_blank" className="">
-                      <p
-                        dangerouslySetInnerHTML={{ __html: item.icon }}
-                        className=""
-                      />
-                    </a>
-                  );
-                })}
-              </div>
-              <div className="flex space-x-3 mb-6 xl:mb-0">
-                <Link to="https://play.google.com/store/apps" target="_blank">
-                  <img className="h-9 w-28" src={android} alt="" />
-                </Link>
-                <Link to="https://www.apple.com/app-store/" target="_blank">
-                  <img className="h-9 w-28" src={apple} alt="" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex flex-col lsm:ml-0 md:ml-10">
-              <h1 className=" font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
-                Company
-              </h1>
-
-              <Link
-                to="/"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Home
-              </Link>
-              <Link
-                to="/contact-us"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/about-us"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                About Us
-              </Link>
-              <Link
-                to="/all-courses"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Courses
-              </Link>
-            </div>
-            <div className="flex flex-col">
-              <h1 className=" font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
-                Terms & Services
-              </h1>
-
-              <Link
-                to="/privacy"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Privacy policy
-              </Link>
-              <Link
-                to="/privacy"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Terms and Condition
-              </Link>
-              <Link
-                to="#"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Payment Methods
-              </Link>
-              <Link
-                to="/sitemap"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                Sitemap
-              </Link>
-              <Link
-                to="#"
-                className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-              >
-                FAQ
-              </Link>
-            </div>
-            <div className="flex gap-28">
-              <div className="flex flex-col">
-                <h1 className=" font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
-                  Categories
-                </h1>
-
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Development
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Marketing
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Personal Dev.
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Office
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Business
-                </Link>
-              </div>
-              <div className="flex flex-col lsm:-mr-9 xl:ml-0 mt-9">
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Design
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Photography
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Statistics
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Data Science
-                </Link>
-                <Link
-                  to="#"
-                  className=" font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8] mb-2"
-                >
-                  Courses
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
- <div class="py-8 xl:py-10 bg-[#071A35]">
+      <div class="py-8 xl:py-10 bg-[#071A35]">
         <div class="container">
           <div class="grid grid-cols-12 gap-6">
             <div class="col-span-12 lg:col-span-4">
@@ -190,14 +17,11 @@ const Footer = () => {
                 src={logo}
                 alt=""
               />
-              <p
-                class="font-poppins font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4 text-center lg:text-start"
-              >
+              <p class="font-poppins font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4 text-center lg:text-start">
                 Let’s stay in touch
               </p>
               <div class="flex space-x-3 mb-6 xl:mb-8 w-max mx-auto lg:mx-0">
-               
-                 {socialIconSvg.map((item, i) => {
+                {socialIconSvg.map((item, i) => {
                   return (
                     <Link key={i} to={item.path} target="_blank" className="">
                       <p
@@ -209,183 +33,188 @@ const Footer = () => {
                 })}
               </div>
               <div class="flex space-x-3 mb-6 xl:mb-0 w-max mx-auto lg:mx-0">
-                <a href="https://play.google.com/store/apps" target="_blank">
-                  <img
-                    class="h-[35px] w-[116px]"
-                    src={android}
-                    alt=""
-                  />
-                </a>
-                <a href="https://www.apple.com/app-store/" target="_blank">
-                  <img
-                    class="h-[35px] w-[116px]"
-                    src={apple}
-                    alt=""
-                  />
-                </a>
+                <Link to="https://play.google.com/store/apps" target="_blank">
+                  <img class="h-[35px] w-[116px]" src={android} alt="" />
+                </Link>
+                <Link to="https://www.apple.com/app-store/" target="_blank">
+                  <img class="h-[35px] w-[116px]" src={apple} alt="" />
+                </Link>
               </div>
             </div>
 
             <div class="col-span-6 md:col-span-3 lg:col-span-2">
-              <h1
-                class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4"
-              >
+              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Company
               </h1>
               <ul class="flex flex-col gap-2">
                 <li>
-                  <a
-                    href="../index.html"
+                  <Link
+                    to="/"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Home</a
                   >
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="../pages/contact.html"
+                  <Link
+                    to="/contact-us"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Contact Us</a
                   >
+                    Contact Us
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="../pages/about-us.html"
+                  <Link
+                    to="/about-us"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >About Us</a
                   >
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="../pages/all-courses.html"
+                  <Link
+                    to="/all-courses"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Courses</a
                   >
+                    Courses
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div class="col-span-6 md:col-span-3 lg:col-span-2">
-              <h1
-                class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4"
-              >
+              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Terms & Services
               </h1>
               <ul class="flex flex-col gap-2">
                 <li>
-                  <a
-                    href="../pages/terms.html"
+                  <Link
+                    to="/privacy"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Privacy policy</a
                   >
+                    Privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="../pages/terms.html"
+                  <Link
+                    to="/privacy"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Terms and Condition</a
                   >
+                    Terms and Condition
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Payment Methods</a
                   >
+                    Payment Methods
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="../pages/sitemap.html"
+                  <Link
+                    to="/sitemap"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Sitemap</a
                   >
+                    Sitemap
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >FAQ</a
                   >
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div class="col-span-12 md:col-span-6 lg:col-span-4">
-              <h1
-                class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4"
-              >
+              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Categories
               </h1>
               <ul class="columns-2 space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Development</a
                   >
+                    Development
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Marketing</a
                   >
+                    Marketing
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Personal Dev.</a
                   >
+                    Personal Dev.
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Office</a
                   >
+                    Office
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Business</a
                   >
+                    Business
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Design</a
                   >
+                    Design
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Photography</a
                   >
+                    Photography
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Statistics</a
                   >
+                    Statistics
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Data Science</a
                   >
+                    Data Science
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
-                    >Courses</a
                   >
+                    Courses
+                  </Link>
                 </li>
               </ul>
             </div>
