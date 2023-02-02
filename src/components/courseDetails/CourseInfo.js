@@ -46,28 +46,16 @@ const CourseInfo = () => {
           FAQ
         </a>
       </ul>
-      {/* <!-- Overview started  --> */}
 
       <CourseOverview />
 
-      {/* <!-- Overview end  --> */}
-
-      {/* <!-- Course Content started  --> */}
       <CourseContent />
 
-      {/* <!-- Course Content end  --> */}
-
-      {/* <!-- Instructor profile started  --> */}
       <CourseInstructor />
 
-      {/* <!-- Instructor profile end  --> */}
-      {/* <!-- Reviews started  --> */}
       <CourseReviews />
-      {/* <!-- Reviews end  --> */}
-      {/* <!-- FAQ started  --> */}
-      {/* <Faq /> */}
+
       <CourseFaq />
-      {/* <!-- FAQ end  --> */}
     </div>
   );
 };

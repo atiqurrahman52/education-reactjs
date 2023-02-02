@@ -252,13 +252,13 @@ const AllCourse = () => {
             </div>
           </div>
 
-          <div className="flex-grow grid gap-x-6 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-10 ">
             {coursesData.map(({ id, img, author, price, title, ratings }) => {
               return (
                 <div key={id}>
                   <Link
                     to="/course-details"
-                    className="rounded-xl overflow-hidden shadow-[0_0_14px_rgba(175,175,175,0.16)] block"
+                    className="rounded-xl overflow-hidden shadow-[0px_0px_2px_rgba(145,158,171,0.2),0px_12px_24px_rgba(145,158,171,0.2)] block"
                   >
                     <div className="mb-4">
                       <img

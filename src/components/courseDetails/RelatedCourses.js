@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import "./styles.css";
 
 // import required modules
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import ReactStars from "react-rating-stars-component";
 import { coursesData } from "../../data/home/coursesData";
 import { Link } from "react-router-dom";
@@ -36,18 +36,21 @@ const RelatedCourses = () => {
           loop={true}
           speed={1000}
           freeMode={true}
-          // navigation={true}
+          Pagination={true}
           allowTouchMove={true}
           loopFillGroupWithBlank={true}
-          modules={[Navigation]}
-          className="mySwiper"
+          modules={[Pagination]}
+          className="courseSlider  !py-10"
+          pagination={{
+            dynamicBullets: true,
+          }}
         >
           {coursesData.map(({ id, img, author, price, title, ratings }) => (
             <SwiperSlide key={id} className="">
               <div className="">
                 <Link
                   to="#"
-                  className="rounded-xl overflow-hidden shadow-[0_0px_14px_rgba(175,175,175,0.16)] block"
+                  className="rounded-xl overflow-hidden shadow-[0px_0px_2px_rgba(145,158,171,0.2),0px_12px_24px_rgba(145,158,171,0.2)] block"
                 >
                   <div className="mb-4">
                     <img className="w-full" src={img} alt="" />

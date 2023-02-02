@@ -22,15 +22,15 @@ const MyCourseContent = () => {
             <source src={video} type="video/mp4" />
           </video>
 
-          <div className="tabs-course flex space-x-2 xl:space-x-4 border-b border-[#DDE0E3] pt-6">
+          <div className="tabs-course flex space-x-3 xl:space-x-9 border-b border-[#DDE0E3] pt-6">
             {myCourseTabs.map((tab) => (
               <button
                 key={tab.id}
                 className={`  
                ${
                  isActive === tab.id
-                   ? "text-primary font-semibold text-base border-b border-success"
-                   : "text-[#9DA6BA] text-base"
+                   ? "text-primary font-semibold text-xs lg:text-base border-b border-success"
+                   : "text-[#9DA6BA] text-xs lg:text-base"
                }  cursor-pointer`}
                 onClick={() => handleTabClick(tab.id)}
               >

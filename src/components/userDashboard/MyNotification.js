@@ -8,7 +8,7 @@ const MyNotification = () => {
           Notification
         </h3>
         <div className="space-y-4">
-          <label className="flex items-center space-x-3">
+          <label className="flex items-center">
             <div className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
@@ -17,7 +17,7 @@ const MyNotification = () => {
               Course update notification
             </p>
           </label>
-          <label className="flex items-center space-x-3">
+          <label className="flex items-center">
             <div className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
@@ -26,7 +26,7 @@ const MyNotification = () => {
               New course from any instructor
             </p>
           </label>
-          <label className="flex items-center space-x-3">
+          <label className="flex items-center">
             <div className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>

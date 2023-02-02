@@ -1,9 +1,14 @@
-import { CaretRight } from "phosphor-react";
-import React from "react";
+import { CaretRight, PlayCircle } from "phosphor-react";
+import React, { useState } from "react";
 import { ratingsData } from "../../data/rating/ratingData";
+import coursevideo from "../../assets/images//courses/course-video.webp";
+import Modal from "../share/Modal";
+// ../assets/images/courses/course-video.webp
 
 const PriceCardMobile = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
   return (
+   <>
     <div className="lg:hidden lg:max-w-[16px] h-fit breadcrumb bg-cover bg-center bg-no-repeat mt-[px]">
       <div className="container py-4">
         <div className="max-w-[746px]">
@@ -11,25 +16,23 @@ const PriceCardMobile = () => {
             <p className="text-primary  font-poppins text-xs md:text-sm leading-4 md:leading-5">
               Explore
             </p>
-        
-            <CaretRight size={18} className='text-primary' />
+
+            <CaretRight size={18} className="text-primary" />
             <p className="text-primary font-poppins font-medium text-xs md:text-sm leading-4 md:leading-5">
               web Development
             </p>
-            <CaretRight size={18} className='text-primary' />
+            <CaretRight size={18} className="text-primary" />
             <p className="text-[#9DA6BA] font-poppins font-medium text-xs md:text-sm leading-4 md:leading-5">
               JavaScript
             </p>
           </div>
 
-          <div className="relative cursor-pointer preview-btn">
-            <img
-              className="rounded-md w-full"
-              src="../assets/images/courses/course-video.webp"
-              alt=""
-            />
+          <div className="relative cursor-pointer preview-btn"
+            onClick={() => setIsModalVisible(true)}
+          >
+            <img className="rounded-md w-full" src={coursevideo} alt="" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <i className="ph-play-circle text-white text-2xl md:text-4xl"></i>
+              <PlayCircle size={34} className="text-white" />
               <p className="absolute left-1/2 -translate-x-1/2 bottom-3 md:bottom-16 text-white font-poppins font-semibold text-sm md:text-base">
                 Review this course
               </p>
@@ -69,13 +72,11 @@ const PriceCardMobile = () => {
               </div>
 
               <div className="flex items-center gap-2 pt-2.5 md:pt-0">
-              {
-                    ratingsData.map(({i,img}) =>
-                    <div key={i}> 
-                      <img src={img} alt='' />
-                    </div>
-                    )
-                  }
+                {ratingsData.map(({ i, img }) => (
+                  <div key={i}>
+                    <img src={img} alt="" />
+                  </div>
+                ))}
                 <p className="font-poppins font-medium text-xs md:text-sm leading-4 md:leading-5 text-primary">
                   4.6
                 </p>
@@ -129,6 +130,8 @@ const PriceCardMobile = () => {
         </div>
       </div>
     </div>
+    {isModalVisible && <Modal setIsModalVisible={setIsModalVisible} />}
+   </>
   );
 };
 

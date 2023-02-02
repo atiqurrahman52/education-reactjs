@@ -16,19 +16,10 @@ const CourseOverview = () => {
               <p className="text-[#51525B] font-poppins text-xs xl:text-sm leading-4 xl:leading-5 mb-3">
                 {description}
               </p>
-              {/* <p
-             className="text-[#51525B] font-poppins text-xs xl:text-sm leading-4 xl:leading-5 mb-3"
-           >
-             You’ll be exposed to principles and strategies, but, more
-             importantly, you’ll learn how to actually apply these abstract
-             concepts by coding three different websites for three very
-             different audiences. Lorem ipsum is dummy text used in laying
-             out print, graphic or web designs Lorem ipsum
-           </p> */}
+             
             </div>
 
-            {/* <!-- skill  --> */}
-            {/* {items.skills.map(({ skill }) => ( */}
+           
          
               <div className="border-[1px] border-[#EDEDED] p-6 rounded-lg">
                 <h2 className="font-poppins font-medium text-base leading-6 text-primary mb-4">
@@ -92,7 +83,7 @@ const CourseOverview = () => {
                 </div>
               </div>
            
-            {/* ))} */}
+           
 
             {/* <!-- Learning Objectives --> */}
             <div>

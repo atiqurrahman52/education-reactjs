@@ -18,7 +18,7 @@ const CourseDetails = () => {
         <PriceCardDesktop />
       </div> */}
       <div className="container">
-        <div class="flex gap-6 justify-between">
+        <div className="flex justify-between gap-6">
           <CourseInfo />
           {/* <CourseInformation /> */}
           <PriceCardDesktop />

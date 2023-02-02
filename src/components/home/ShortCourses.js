@@ -43,7 +43,6 @@ const ShortCourses = () => {
             speed={1000}
             freeMode={true}
             Pagination={true}
-            // navigation={true}
             allowTouchMove={true}
             loopFillGroupWithBlank={true}
             modules={[Navigation, Pagination]}
@@ -108,7 +107,6 @@ const ShortCourses = () => {
             <CaretRight size={18} weight="bold" className="text-success" />
           </button>
         </div>
-        
       </div>
     </div>
   );

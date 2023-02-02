@@ -17,7 +17,7 @@ import mobileLogo from "../../assets/images/logo/mobile-logo.png";
 import { Link } from "react-router-dom";
 import { coursesCartData } from "../../data/myCourses/myCourseCartData";
 import { cartData } from "../../data/cartData.js/cartData";
-import { notificationData } from "../../data/notification/notificationData";
+// import { notificationData } from "../../data/notification/notificationData";
 import notification1 from "../../assets/images/notification/image1.webp";
 import notification2 from "../../assets/images/notification/image2.webp";
 import userImg from "../../assets/images/logo/user.png";
@@ -146,7 +146,7 @@ const Navbar = () => {
                 <div className="hidden absolute group-hover:block right-0 pt-[33px] z-20">
                   <div className="p-6 w-[358px] max-h-[428px] bg-white z-99 shadow-md rounded-2xl">
                     <div className="space-y-4">
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55]"
@@ -159,7 +159,7 @@ const Navbar = () => {
                         </label>
                       </div>
 
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55]"
@@ -172,7 +172,7 @@ const Navbar = () => {
                         </label>
                       </div>
 
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55]"
@@ -184,7 +184,7 @@ const Navbar = () => {
                           Italiano
                         </label>
                       </div>
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55]"
@@ -197,7 +197,7 @@ const Navbar = () => {
                         </label>
                       </div>
 
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55]"
@@ -209,7 +209,7 @@ const Navbar = () => {
                           Polski
                         </label>
                       </div>
-                      <div className=" text-sm leading-[22px] text-primary">
+                      <div className=" text-sm leading-[22px] text-primary flex items-center">
                         <input
                           type="radio"
                           className="accent-[#00AB55] pr-3"
@@ -249,18 +249,19 @@ const Navbar = () => {
                               <div>
                                 <img src={img} alt="" />
                               </div>
+
                               <div>
-                                <p className=" text-sm leading-[21px] text-primary">
+                                <p className="text-sm leading-[21px] text-primary">
                                   {courseName}
                                 </p>
-                                <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                                  {description}
-                                </p>
-                              </div>
-                              <div className="flex items-end">
-                                <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                                  $ {price}
-                                </p>
+                                <div className="flex items-center justify-between space-x-8 pt-3">
+                                  <p className=" font-light text-xs leading-[17px] text-[#9DA6BA]">
+                                    {description}
+                                  </p>
+                                  <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
+                                    $ {price}
+                                  </p>
+                                </div>
                               </div>
                             </Link>
                           </li>
@@ -639,8 +640,8 @@ const Navbar = () => {
         <div className="lg:hidden w-full mobile-top-bar sticky top-0 left-0 bg-white drop-shadow-[0_4px_20px_rgba(38,32,32,0.06)] z-20">
           <div className="flex justify-between px-4 py-4">
             <div>
-              <Link to='/'>
-              <img src={mobileLogo} alt="" />
+              <Link to="/">
+                <img src={mobileLogo} alt="" />
               </Link>
             </div>
 
@@ -670,18 +671,19 @@ const Navbar = () => {
                               <div>
                                 <img src={img} alt="" />
                               </div>
+
                               <div>
-                                <p className=" text-sm leading-[21px] text-primary">
+                                <p className="text-sm leading-[21px] text-primary">
                                   {courseName}
                                 </p>
-                                <p className=" font-light text-xs leading-[17px] text-[#9DA6BA] pt-3">
-                                  {description}
-                                </p>
-                              </div>
-                              <div className="flex items-end">
-                                <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
-                                  $ {price}
-                                </p>
+                                <div className="flex items-center justify-between space-x-3 xl:space-x-8 pt-3">
+                                  <p className=" font-light text-xs leading-[17px] text-[#9DA6BA]">
+                                    {description}
+                                  </p>
+                                  <p className=" font-medium text-xs leading-[18px] text-[#3E4F67]">
+                                    $ {price}
+                                  </p>
+                                </div>
                               </div>
                             </Link>
                           </li>
@@ -1020,8 +1022,8 @@ const Navbar = () => {
                   <Link
                     key={id}
                     onClick={() => {
-                      scrollToTop()
-                      setMainMenu(false)
+                      scrollToTop();
+                      setMainMenu(false);
                       setExplore(false);
                       setExploreSubMenu(false);
                     }}

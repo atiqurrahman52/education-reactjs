@@ -1,18 +1,14 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const BecomeInstructor = () => {
 
 
-    const navigate = useNavigate();
-    const navigateToDestination = (id) => {
-      navigate(`/instructor/${id}`);
-    };
+  
 
     return (
         <div>
-        {/* <Link href="./pages/instructor.html"> */}
-        {/* <Link to={`/destination/${id}`}> */}
+       
         <Link to='/instructor'>
           <div
             class="instructor-bg bg-cover bg-center bg-no-repeat w-full h-[203px] xl:h-[287px]"
@@ -21,7 +17,7 @@ const BecomeInstructor = () => {
               <h3
                 class="font-raleway font-bold text-2xl xl:text-5xl leading-9 xl:leading-[72px] text-primary mb-1"
               >
-                Become An Instructor
+                Become An Instructor 
               </h3>
               <p
                 class="font-raleway font-medium text-xs xl:text-sm leading-4 xl:leading-6 text-gray text-center mb-4 xl:mb-6"
