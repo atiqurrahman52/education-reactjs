@@ -9,7 +9,7 @@ import { coursesData } from "../../data/home/coursesData";
 const AllCourse = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectDropdown, setSelectDropdown] = useState("Popular");
-  const arr = ["Highest Rated", "Newest", "Most Selling"];
+  const value = ["Highest Rated", "Newest", "Most Selling"];
   const handleDropdown = (item) => {
     setSelectDropdown(item);
     setShowDropdown(false);
@@ -18,7 +18,9 @@ const AllCourse = () => {
   return (
     <div className="container">
       <div className="py-6 xl:py-16 gap-6 xl:gap-8 ">
+
         <div className="flex justify-between">
+          
           <div className="flex justify-center items-center rounded gap-3 xl:gap-4 bg-[#F5F9FA] px-4 py-3 xl:px-6">
             <FunnelSimple size={24} className="text-primary" />
             <p
@@ -36,10 +38,9 @@ const AllCourse = () => {
           >
             <span
               onClick={() => setShowDropdown(true)}
-              className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] p-3 rounded-md"
+              className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] px-2 py-3 rounded-md"
             >
-              <span className="text-[#9DA6BA] text-xs md:text-lg leading-6">
-                {" "}
+              <span className="text-[#9DA6BA] text-xs xl:text-lg leading-6">
                 Sort by
               </span>
               {selectDropdown}
@@ -51,8 +52,9 @@ const AllCourse = () => {
 
             {/* dropdown */}
             {showDropdown && (
-              <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
-                {arr.map((item) => (
+              // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+              <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+                {value.map((item) => (
                   <li
                     onClick={() => handleDropdown(item)}
                     className="hover:bg-success hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
@@ -63,6 +65,7 @@ const AllCourse = () => {
               </ul>
             )}
           </button>
+
         </div>
         <div className="flex flex-col md:flex-row gap-6 pt-6 xl:pt-8">
           <div className="w-[306px] flex-shrink-0 sidebar bg-[#F9F9FB] relative transition-all duration-300">

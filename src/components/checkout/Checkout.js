@@ -8,25 +8,25 @@ import { Link } from "react-router-dom";
 const Checkout = () => {
   return (
     <>
-      <div class="breadcrumb bg-cover bg-center bg-no-repeat h-[250px]">
-        <div class="container">
-          <div class="flex items-center gap-1 pt-6">
-            <p class="text-primary font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
+      <div className="breadcrumb bg-cover bg-center bg-no-repeat h-[250px]">
+        <div className="container">
+          <div className="flex items-center gap-1 pt-6">
+            <p className="text-primary font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
               web Development
             </p>
 
             <CaretRight size={20} className="text-disable" />
-            <p class="text-[#9DA6BA] font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
+            <p className="text-[#9DA6BA] font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
               JavaScript
             </p>
 
             <CaretRight size={20} className="text-disable" />
-            <p class="text-[#9DA6BA] font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
+            <p className="text-[#9DA6BA] font-poppins text-xs xl:text-sm leading-4 xl:leading-5">
               Checkout
             </p>
           </div>
 
-          <h2 class="font-poppins font-medium text-xl xl:text-4xl leading-7 xl:leading-[54px] text-primary pt-14">
+          <h2 className="font-poppins font-medium text-xl xl:text-4xl leading-7 xl:leading-[54px] text-primary pt-14">
             Checkout
           </h2>
         </div>

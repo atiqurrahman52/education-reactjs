@@ -759,17 +759,17 @@ const Navbar = () => {
               mainMenu ? "right-0" : "right-full"
             } fixed top-0 w-full h-screen bg-white z-30 transition-all duration-300 mobile_menu_content profile-menu`}
           >
-            <div class="flex justify-between px-4 py-4 space-x-4 shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
+            <div className="flex justify-between px-4 py-4 space-x-4 shadow-[0_4px_20px_rgba(38,32,32,0.06)]">
               <div>
                 <img className="w-[32px] h-[32px]" src={mobileLogo} alt="" />
               </div>
-              <label for="search" class="relative h-8 w-full">
-                <button class="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
+              <label for="search" className="relative h-8 w-full">
+                <button className="text-[#DCDCDC] absolute top-1/2 -translate-y-1/2 left-2">
                   <MagnifyingGlass size={20} className="" />
                 </button>
 
                 <input
-                  class="text-xs w-full h-full pl-10 pr-7 leading-4 placeholder:text-[#DCDCDC] text-black outline-none bg-transparent rounded-[32px] border-[1px] border-[#D7D9DF]"
+                  className="text-xs w-full h-full pl-10 pr-7 leading-4 placeholder:text-[#DCDCDC] text-black outline-none bg-transparent rounded-[32px] border-[1px] border-[#D7D9DF]"
                   type="text"
                   id="search"
                   placeholder="Search anything"
@@ -778,7 +778,7 @@ const Navbar = () => {
 
               <button
                 type="button"
-                class="close-menu"
+                className="close-menu"
                 onClick={() => setMainMenu(false)}
               >
                 <X size={24} className="text-disable" />

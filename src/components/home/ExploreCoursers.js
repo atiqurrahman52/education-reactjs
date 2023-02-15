@@ -27,6 +27,7 @@ const ExploreCoursers = () => {
                     />
                   </div>
                   <div className="p-4">
+
                     <div className="flex items-center gap-1 mb-4">
                       <ReactStars
                         size={14}

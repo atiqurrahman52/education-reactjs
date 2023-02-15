@@ -16,7 +16,7 @@ const Home = () => {
       <HeroSection />
       <Skills />
       <ExploreCoursers />
-      {/* <PopularCourse /> */}
+      <PopularCourse />
       <FeaturedCourses />
       <SubjectAreas />
       <HighestSellingCourses />

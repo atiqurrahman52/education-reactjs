@@ -1,12 +1,13 @@
 import { DotsThreeVertical, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { orderHistoryData } from "../../data/userDashboard/orderHistoryData";
+import { certificateData } from "../../data/userDashboard/certificateData";
+import certificate from "../../assets/images/certificete/certificate.png";
 import UserDashboardLayout from "../../layout/UserDashboardLayout";
 
-const OrderHistory = () => {
+const Certi = () => {
   const TableRow = ({ data }) => {
-    const { id, img, courseName, enrollDate, price, orderId, status } = data;
+    const { id, img, product, enrollDate, completeDate, remarks, color } = data;
     const [toggle, setToggle] = useState(false);
 
     const handleClick = () => {
@@ -23,7 +24,7 @@ const OrderHistory = () => {
 
             <div className="ml-4">
               <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
-                {courseName}
+                {product}
               </p>
             </div>
           </div>
@@ -35,19 +36,27 @@ const OrderHistory = () => {
         </td>
         <td className="px-4 py-4">
           <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
-            $ {price}
+            {completeDate}
           </p>
         </td>
         <td className="px-4 py-4">
-          <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
-            {orderId}
+          {/* <p
+            className={`text-[${color}] font-poppins text-xs font-bold ${remarks === "Outstanding" && "bg-green-900/10"}`}
+          > */}
+          <p
+            className={`text-[${color}] font-poppins text-xs font-bold text-center ${
+              remarks === "Outstanding" &&
+              "bg-[#1B806A]/[16%] px-2 py-1 rounded-md"
+            } ${
+              remarks === "Better" && "bg-[#FF6B00]/[16%] px-2 py-1 rounded-md"
+            } ${
+              remarks === "Average" && "bg-[#3789FF]/[16%] px-2 py-1 rounded-md"
+            }`}
+          >
+            {remarks}
           </p>
         </td>
-        <td className="px-4 py-4">
-          <p className="font-poppins text-sm leading-[22px] text-[#212B36]">
-            {status}
-          </p>
-        </td>
+
         <td className="px-4 py-4">
           <button onClick={handleClick} className="relative">
             <DotsThreeVertical
@@ -56,15 +65,19 @@ const OrderHistory = () => {
             />
             {toggle && (
               <div className="bg-white rounded-lg drop-shadow-md px-3 py-[10px] absolute right-full top-1/2 -translate-y-1/2 after:content after:h-3 after:w-3 after:rounded after:bg-white after:absolute after:right-[-5px] after:top-1/2 after:-translate-y-1/2 after:rotate-45">
-                <Link
-                  to="/my-course"
-                  className="font-poppins font-semibold text-sm leading-[22px] text-primary mb-2 whitespace-nowrap"
-                >
-                  View Course
-                </Link>
-                <p className="font-poppins font-semibold text-sm leading-[22px] text-[#F1350C] whitespace-nowrap">
-                  Remove
+                <p className="font-poppins font-medium text-sm leading-[22px] text-primary mb-2 whitespace-nowrap">
+                  Preview Certificate
                 </p>
+                {/* <p className="font-poppins font-medium text-sm leading-[22px] text-success whitespace-nowrap">
+                  Download
+                </p> */}
+                <a
+                  className="font-poppins font-semibold text-sm leading-[22px] text-success whitespace-nowrap"
+                  href={certificate}
+                  download
+                >
+                  download
+                </a>
               </div>
             )}
           </button>
@@ -99,19 +112,16 @@ const OrderHistory = () => {
             <thead className="bg-[#F4F6F8] ">
               <tr className="">
                 <th className="min-w-[250px] font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381]  px-4 py-4">
-                  Course name
+                  Product
                 </th>
                 <th className="min-w-[120px] font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381] px-4 py-4">
                   Enroll Date
                 </th>
                 <th className="min-w-[120px] font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381] px-4 py-4">
-                  Price
+                  Complete Date
                 </th>
                 <th className="min-w-[120px] font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381] px-4 py-4">
-                  Order Id
-                </th>
-                <th className="min-w-[160px] font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381] px-4 py-4">
-                  Status
+                  Remarks
                 </th>
 
                 <th className="font-poppins font-semibold text-left text-sm leading-[21px] text-[#637381]"></th>
@@ -119,7 +129,7 @@ const OrderHistory = () => {
             </thead>
 
             <tbody>
-              {orderHistoryData.map((item, i) => (
+              {certificateData.map((item, i) => (
                 <TableRow key={i} data={item} />
               ))}
             </tbody>
@@ -130,4 +140,4 @@ const OrderHistory = () => {
   );
 };
 
-export default OrderHistory;
+export default Certi;

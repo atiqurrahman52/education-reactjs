@@ -5,7 +5,6 @@ import SignUp from "./components/authentication/SignUp";
 import Demo from "./components/courseDetails/Demo";
 import Tab from "./components/practice/Tab";
 import TermsAndServices from "./pages/TermsAndServices";
-
 import NotFound from "./components/share/NotFound";
 import BasicLayout from "./layout/BasicLayout";
 import AboutUs from "./pages/AboutUs";
@@ -28,6 +27,7 @@ import Test from "./pages/Test";
 import Test2 from "./pages/Test2";
 import Payment from "./components/userDashboard/payment/Payment";
 import RemoveAccount from "./components/userDashboard/removeAccount/RemoveAccount";
+import Certi from "./components/userDashboard/Certi";
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
       <Route path="/" element={<BasicLayout />}>
         <Route index element={<Home />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/certi" element={<Certi />} />
         {/* <Route path="/test2" element={<Test2 />} /> */}
         <Route path="/instructor" element={<Instructor />} />
         <Route path="/all-courses" element={<AllCourses />} />
@@ -51,11 +52,11 @@ function App() {
         <Route path="/tab" element={<Tab />} />
         <Route path="/my-profile" element={<Profile />} />
         <Route path="/order-history" element={<OrderHistory />} />
-        <Route path="/certificate" element={<Certificate/>} />
+        <Route path="/certificate" element={<Certificate />} />
         <Route path="/language" element={<Language />} />
         <Route path="/password-setting" element={<PasswordSetting />} />
         {/* <Route path="/payment" element={<Payment />} /> */}
-        <Route path="/payment" element={<Payment/>} />
+        <Route path="/payment" element={<Payment />} />
 
         <Route path="/my-notification" element={<MyNotification />} />
         {/* <Route path="/remove-account" element={<RemoveAccount />} /> */}

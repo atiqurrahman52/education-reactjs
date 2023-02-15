@@ -8,19 +8,19 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div class="py-8 xl:py-10 bg-[#071A35]">
-        <div class="container">
-          <div class="grid grid-cols-12 gap-6">
-            <div class="col-span-12 lg:col-span-4">
+      <div className="py-8 xl:py-10 bg-[#071A35]">
+        <div className="container">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 lg:col-span-4">
               <img
-                class="h-[92px] w-[168px] mb-6 xl:mb-8 mx-auto lg:mx-0"
+                className="h-[92px] w-[168px] mb-6 xl:mb-8 mx-auto lg:mx-0"
                 src={logo}
                 alt=""
               />
-              <p class="font-poppins font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4 text-center lg:text-start">
+              <p className="font-poppins font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4 text-center lg:text-start">
                 Let’s stay in touch
               </p>
-              <div class="flex space-x-3 mb-6 xl:mb-8 w-max mx-auto lg:mx-0">
+              <div className="flex space-x-3 mb-6 xl:mb-8 w-max mx-auto lg:mx-0">
                 {socialIconSvg.map((item, i) => {
                   return (
                     <Link key={i} to={item.path} target="_blank" className="">
@@ -32,25 +32,25 @@ const Footer = () => {
                   );
                 })}
               </div>
-              <div class="flex space-x-3 mb-6 xl:mb-0 w-max mx-auto lg:mx-0">
+              <div className="flex space-x-3 mb-6 xl:mb-0 w-max mx-auto lg:mx-0">
                 <Link to="https://play.google.com/store/apps" target="_blank">
-                  <img class="h-[35px] w-[116px]" src={android} alt="" />
+                  <img className="h-[35px] w-[116px]" src={android} alt="" />
                 </Link>
                 <Link to="https://www.apple.com/app-store/" target="_blank">
-                  <img class="h-[35px] w-[116px]" src={apple} alt="" />
+                  <img className="h-[35px] w-[116px]" src={apple} alt="" />
                 </Link>
               </div>
             </div>
 
-            <div class="col-span-6 md:col-span-3 lg:col-span-2">
-              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
+            <div className="col-span-6 md:col-span-3 lg:col-span-2">
+              <h1 className="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Company
               </h1>
-              <ul class="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     to="/"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Home
                   </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/contact-us"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Contact Us
                   </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/about-us"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     About Us
                   </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/all-courses"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Courses
                   </Link>
@@ -82,15 +82,15 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div class="col-span-6 md:col-span-3 lg:col-span-2">
-              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
+            <div className="col-span-6 md:col-span-3 lg:col-span-2">
+              <h1 className="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Terms & Services
               </h1>
-              <ul class="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     to="/privacy"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Privacy policy
                   </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/privacy"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Terms and Condition
                   </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Payment Methods
                   </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/sitemap"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Sitemap
                   </Link>
@@ -122,7 +122,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     FAQ
                   </Link>
@@ -130,15 +130,15 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div class="col-span-12 md:col-span-6 lg:col-span-4">
-              <h1 class="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
+            <div className="col-span-12 md:col-span-6 lg:col-span-4">
+              <h1 className="font-poppins font-semibold text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4">
                 Categories
               </h1>
-              <ul class="columns-2 space-y-2">
+              <ul className="columns-2 space-y-2">
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Development
                   </Link>
@@ -146,7 +146,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Marketing
                   </Link>
@@ -154,7 +154,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Personal Dev.
                   </Link>
@@ -162,7 +162,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Office
                   </Link>
@@ -170,7 +170,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Business
                   </Link>
@@ -179,7 +179,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Design
                   </Link>
@@ -187,7 +187,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Photography
                   </Link>
@@ -195,7 +195,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Statistics
                   </Link>
@@ -203,7 +203,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Data Science
                   </Link>
@@ -211,7 +211,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="#"
-                    class="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
                   >
                     Courses
                   </Link>

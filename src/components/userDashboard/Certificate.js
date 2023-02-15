@@ -7,9 +7,8 @@ import sql from "../../assets/images/profile/my-sql.webp";
 import python from "../../assets/images/profile/python.webp";
 
 const Certificate = () => {
-
   const TableRow = ({ data }) => {
-    const { id, img, product, enrollDate, remarks, completeDate} = data;
+    const { id, img, product, enrollDate, remarks, completeDate } = data;
     const [toggle, setToggle] = useState(false);
 
     const handleClick = () => {
@@ -46,16 +45,32 @@ const Certificate = () => {
             {remarks}
           </p>
         </td>
-       
+        <td className="px-4 py-4">
+          <button onClick={handleClick} className="relative">
+            <DotsThreeVertical
+              size={40}
+              className="text-[#637381] cursor-pointer"
+            />
+            {toggle && (
+              <div className="bg-white rounded-lg drop-shadow-md px-3 py-[10px] absolute right-full top-1/2 -translate-y-1/2 after:content after:h-3 after:w-3 after:rounded after:bg-white after:absolute after:right-[-5px] after:top-1/2 after:-translate-y-1/2 after:rotate-45">
+                <Link
+                  to="/my-course"
+                  className="font-poppins font-semibold text-sm leading-[22px] text-primary mb-2 whitespace-nowrap"
+                >
+                  View Course
+                </Link>
+                <p className="font-poppins font-semibold text-sm leading-[22px] text-[#F1350C] whitespace-nowrap">
+                  Remove
+                </p>
+              </div>
+            )}
+          </button>
+        </td>
       </tr>
     );
   };
 
-
-
-
   return (
-
     <UserDashboardLayout>
       <div className="max-w-[1076px]  shadow-[0px_0px_31px_rgba(175,175,175,0.16)] rounded-2xl px-6 py-4">
         <div className="mb-6">
@@ -99,11 +114,7 @@ const Certificate = () => {
                 <td className="px-4 py-4">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 w-10 h-10">
-                      <img
-                        className="rounded-md"
-                        src={python}
-                        alt=""
-                      />
+                      <img className="rounded-md" src={python} alt="" />
                     </div>
 
                     <div className="ml-4">
@@ -165,16 +176,12 @@ const Certificate = () => {
               {/* {certificateData.map((item, i) => (
                 <TableRow key={i} data={item} />
               ))} */}
-            {/* </tbody> */}
+              {/* </tbody> */}
               <tr>
                 <td className="px-4 py-4">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 w-10 h-10">
-                      <img
-                        className="rounded-md"
-                        src={sql}
-                        alt=""
-                      />
+                      <img className="rounded-md" src={sql} alt="" />
                     </div>
 
                     <div className="ml-4">
@@ -236,11 +243,7 @@ const Certificate = () => {
                 <td className="px-4 py-4">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 w-10 h-10">
-                      <img
-                        className="rounded-md"
-                        src={python}
-                        alt=""
-                      />
+                      <img className="rounded-md" src={python} alt="" />
                     </div>
 
                     <div className="ml-4">
@@ -297,17 +300,13 @@ const Certificate = () => {
                     </div>
                   </div>
                 </td>
-              </tr> 
-
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </UserDashboardLayout>
   );
-
-
-
 };
 
 export default Certificate;

@@ -14,7 +14,7 @@ const RelatedCourses = () => {
   return (
     <div className="container">
       <div className="py-8 xl:py-10 gap-6 xl:gap-8">
-        <h1 class="font-poppins text-2xl xl:text-3xl leading-8 xl:leading-10 text-primary text-center capitalize mb-6 xl:mb-8">
+        <h1 className="font-poppins text-2xl xl:text-3xl leading-8 xl:leading-10 text-primary text-center capitalize mb-6 xl:mb-8">
           Related Courses
         </h1>
         <Swiper

@@ -1,4 +1,4 @@
-import { Briefcase, CaretLeft, CaretRight } from "phosphor-react";
+import { Briefcase, CaretLeft, CaretRight, FileHtml } from "phosphor-react";
 import { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
@@ -36,11 +36,11 @@ const PopularCourse = () => {
         // navigation={true}
         // pagination={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper courseSlider"
+        className="mySwiper courseSlider px-2 !py-5"
         // className="courseSlider !px-2 !py-10"
-        pagination={{
-          dynamicBullets: true,
-        }}
+        // pagination={{
+        //   dynamicBullets: true,
+        // }}
         navigation={{
           prevEl: ".coursePrev-btn",
           nextEl: ".courseNext-btn",
@@ -53,7 +53,8 @@ const PopularCourse = () => {
 
   return (
     <div>
-      <div className="max-w-lg mx-auto relative">
+      {/* <div className="max-w-lg mx-auto relative"> */}
+      <div className="max-w-[999px]  mx-auto relative">
         <SwiperLayout>
           {popularCoursesData.map((item, i) => {
             return (
@@ -62,27 +63,61 @@ const PopularCourse = () => {
                 key={i}
                 className=""
               >
-                <div className="flex justify-center cursor-pointer">
-                  <button className="flex items-center justify-center gap-4 p-4 rounded-[10px] border border-black/10 w-full font-poppins text-xs xl:text-base text-disable">
-                    {item.name}
-                  </button>
+                {/* <div className="flex justify-center cursor-pointer"> */}
+                <div className="px-2 lg:px-0">
+                 
+                  {/* <button className="flex items-center justify-center gap-4 p-4 rounded-[10px] border border-black/10 w-full font-poppins text-xs xl:text-base text-disable"> */}
+                  {/* <button className="flex items-center py-4 px-5 gap-4 rounded-[10px] border border-black/10 w-80 
+                  font-poppins text-xs xl:text-base text-disable">
+                  <span>{item.icon}</span> {item.name}
+                  </button> */}
+                  <p className="flex justify-center cursor-pointer gap-4 py-3 border border-[#F0F0F0] rounded-lg text-disable text-sm lg:text-base px- mx-">  <span className="text-disable">{item.icon}</span> {item.name} </p>
                 </div>
               </SwiperSlide>
             );
           })}
         </SwiperLayout>
 
-        <button className="md:block xs:hidden coursePrev-btn z-50 absolute top-1/2 -left-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
+        <button className="md:block xs:hidden coursePrev-btn z-50 absolute top-[34%] -left-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
           <CaretLeft size={18} weight="bold" className="text-success" />
         </button>
-        <button className="md:block xs:hidden courseNext-btn z-50 absolute top-1/2 -right-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
+        <button className="md:block xs:hidden courseNext-btn z-50 absolute top-[34%] -right-2 h-8 w-8 bg-white shadow-[0px_0px_14px_rgba(175,175,175,0.16)] rounded-full flex justify-center items-center">
           <CaretRight size={18} weight="bold" className="text-success" />
         </button>
-
       </div>
 
-      <div className="container border py-5">
-        <SwiperLayout>
+      <div className="container py-5">
+        <Swiper
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1280: {
+              slidesPerView: 4,
+            },
+          }}
+          slidesPerView={4}
+          spaceBetween={20}
+          centeredSlides={false}
+          // autoplay={{
+          //   delay: 3500,
+          //   disableOnInteraction: false,
+          // }}
+          loop={true}
+          speed={1500}
+          loopFillGroupWithBlank={true}
+          // navigation={true}
+          // pagination={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper courseSlider px-2 !py-5"
+          // className="courseSlider !px-2 !py-10"
+          pagination={{
+            dynamicBullets: true,
+          }}
+        >
           {tabData.map((item, i) => {
             return (
               <SwiperSlide key={i}>
@@ -128,7 +163,7 @@ const PopularCourse = () => {
               </SwiperSlide>
             );
           })}
-        </SwiperLayout>
+        </Swiper>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ const certificateData = [
     enrollDate: "10 Apr 2022",
     completeDate: "15 Dec 2022",
     remarks: "Outstanding",
+    color: "#1B806A"
   },
   {
     id: 1,
@@ -18,6 +19,7 @@ const certificateData = [
     enrollDate: "07 Jun 2022",
     completeDate: "28 Dec 2022",
     remarks: "Better",
+    color: "#FF6B00"
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ const certificateData = [
     enrollDate: "10 Nov 2022",
     completeDate: "25 Oct 2022",
     remarks: "Average",
+    color: "#3789FF"
   },
 ];
 
