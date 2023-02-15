@@ -12,11 +12,13 @@ const Footer = () => {
         <div className="container">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 lg:col-span-4">
-              <img
+             <Link to='/'>
+             <img
                 className="h-[92px] w-[168px] mb-6 xl:mb-8 mx-auto lg:mx-0"
                 src={logo}
                 alt=""
               />
+             </Link>
               <p className="font-poppins font-medium text-sm xl:text-base leading-5 xl:leading-6 text-white mb-4 text-center lg:text-start">
                 Let’s stay in touch
               </p>

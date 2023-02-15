@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { instructorData } from "../../data/instructor/instructorData";
+import instructor from "../../assets/images/instructor/video.webp";
+import Modal from "../share/Modal";
 
 const BecomeInstructor = () => {
   const [tabActive, setTabActive] = useState(0);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className="py-8 xl:py-10">
@@ -17,8 +20,7 @@ const BecomeInstructor = () => {
                 key={id}
                 onClick={() => setTabActive(id)}
                 className={`cursor-pointer font-poppins text-[#9EA7B3] whitespace-nowrap ${
-                  id === tabActive &&
-                  "font-medium  text-base text-[#3789FF] "
+                  id === tabActive && "font-medium  text-base text-[#3789FF] "
                 }`}
               >
                 {tab}
@@ -57,7 +59,12 @@ const BecomeInstructor = () => {
               )
           )}
         </div>
+
+        <div class="flex justify-center preview-btn cursor-pointer">
+          <img  onClick={() => setIsModalVisible(true)} src={instructor} alt='' />
+        </div>
       </div>
+      {isModalVisible && <Modal setIsModalVisible={setIsModalVisible} />}
     </div>
   );
 };

@@ -106,7 +106,7 @@ const Navbar = () => {
               </Link>
 
               <div className="relative group">
-                <p className=" text-sm xl:text-base leading-6 text-primary capitalize">
+                <p className=" text-sm xl:text-base leading-6 text-primary capitalize cursor-pointer">
                   My Courses
                 </p>
                 <div className="hidden absolute group-hover:block right-0 pt-[33px]">
@@ -135,7 +135,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <div className="flex items-center gap-1">
                   <img src={global} alt="" />
                   <p className=" text-sm leading-6 text-primary capitalize">
@@ -234,7 +234,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <ShoppingCart size={24} className="text-primary" />
                 <div className="hidden absolute group-hover:block right-0 pt-8">
                   <div className="p-6 w-[367px] rounded-[4px] bg-white shadow-md">
@@ -286,7 +286,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <img src={bell} alt="" />
                 <div className="absolute hidden group-hover:block right-0 pt-[34px]">
                   <div className="max-h-[540px] w-[384px] bg-white rounded-md shadow-md px-4 py-6">
@@ -295,12 +295,12 @@ const Navbar = () => {
                         <p className=" font-semibold text-base leading-6 text-primary">
                           Notifications
                         </p>
-                        <a
-                          href="/"
+                        <Link
+                          to="/my-notification"
                           className=" font-medium text-sm leading-6 text-success"
                         >
-                          Setting
-                        </a>
+                          Setting 
+                        </Link>
                       </div>
                       <p className=" text-sm leading-[22px] text-disable">
                         You have 4 unread messages
@@ -404,7 +404,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <User
                   size={28}
                   className="text-primary bg-[#F1F1F2] rounded-[38px] p-[3px]"
