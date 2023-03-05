@@ -68,7 +68,8 @@ const SignIn = () => {
             </div>
           </div>
           <div className="flex justify-end font-poppins text-sm leading-[22px] pt-5 md:pt-3 text-primary">
-            <a href="../pages/forgot-password.html">Forgot password?</a>
+           
+            <Link to='/forgot-password'>Forgot password?</Link>
           </div>
 
           <div className="flex justify-center items-center py-5 xl:py-6">

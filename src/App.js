@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import SignIn from "./components/authentication/SignIn";
 import SignUp from "./components/authentication/SignUp";
+import ForgotPassword from "./components/authentication/ForgotPassword";
 import Demo from "./components/courseDetails/Demo";
 import Tab from "./components/practice/Tab";
 import TermsAndServices from "./pages/TermsAndServices";
@@ -34,7 +35,11 @@ function App() {
     <Routes>
       <Route path="/" element={<BasicLayout />}>
         <Route index element={<Home />} />
+        {/* <Route path="/test" element={<Test />} /> */}
         <Route path="/test" element={<Test />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/certi" element={<Certi />} />
         {/* <Route path="/test2" element={<Test2 />} /> */}
         <Route path="/instructor" element={<Instructor />} />

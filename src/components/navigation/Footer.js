@@ -81,6 +81,14 @@ const Footer = () => {
                     Courses
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/sign-in"
+                    className="font-poppins font-normal text-xs xl:text-sm leading-5 text-white opacity-[0.8]"
+                  >
+                    Login
+                  </Link>
+                </li>
               </ul>
             </div>
 
